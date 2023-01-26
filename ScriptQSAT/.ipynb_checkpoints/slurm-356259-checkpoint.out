@@ -1,0 +1,10 @@
+37
+6140.319354534149  : time taken for density_matrix
+0.7996
+[13]
+40
+29209.59935951233  : time taken for density_matrix
+0.7992
+[13, 14]
+43
+slurmstepd: error: *** JOB 356259 ON cn035 CANCELLED AT 2023-01-22T20:20:41 DUE TO TIME LIMIT ***

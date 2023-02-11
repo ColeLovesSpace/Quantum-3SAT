@@ -1,0 +1,45 @@
+7
+0.09396553039550781  : time taken for density_matrix
+0.8253
+[3]
+10
+0.15223097801208496  : time taken for density_matrix
+0.7673
+[3, 4]
+13
+0.3652167320251465  : time taken for density_matrix
+0.7449
+[3, 4, 5]
+16
+0.4774017333984375  : time taken for density_matrix
+0.7552
+[3, 4, 5, 6]
+19
+0.8069303035736084  : time taken for density_matrix
+0.7446
+[3, 4, 5, 6, 7]
+22
+1.113943099975586  : time taken for density_matrix
+0.7713
+[3, 4, 5, 6, 7, 8]
+25
+3.04010009765625  : time taken for density_matrix
+0.7756
+[3, 4, 5, 6, 7, 8, 9]
+28
+11.304648876190186  : time taken for density_matrix
+0.7826
+[3, 4, 5, 6, 7, 8, 9, 10]
+31
+49.91254377365112  : time taken for density_matrix
+0.7843
+[3, 4, 5, 6, 7, 8, 9, 10, 11]
+34
+233.88827681541443  : time taken for density_matrix
+0.7915
+[3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+37
+1098.3997101783752  : time taken for density_matrix
+0.7982
+[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+40

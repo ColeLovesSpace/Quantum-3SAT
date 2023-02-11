@@ -222,7 +222,7 @@ def main():
         t = time.time()    
         job_density_matrix = simulator_density_matrix.run(circ, shots=shots)
         counts_density_matrix = job_density_matrix.result().get_counts(0)
-        print(time.time() - t, " : time taken for density_matrix")
+        print(time.time() - t, " : time taken for aer dm")
         print(counts_density_matrix[solName]/shots)
        
         # plot current scaling
@@ -233,7 +233,7 @@ def main():
 
         ax = plt.gca()
         ax.set_ylim([0, 1])
-        name = "plots/SinglePercision/{:0>3}.png".format(n)
+        name = "plots/aerGPU/{:0>3}.png".format(n)
         plt.savefig(name)
 
 if __name__ == "__main__":

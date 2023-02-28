@@ -8,6 +8,10 @@
 #include <stdlib.h>
 #include <iterator>
 
+// no error 
+// g++ -c -std=c++11 -O3 -fpic SATProbCalc.cpp SATProbCalc.hpp
+// g++ -shared -std=c++11 -O3 -o lib/SATProbCalc.so SATProbCalc.o
+
 //compile using 
 //g++ -c -Wall -std=c++11 -Werror -O3 -fpic SATProbCalc.cpp SATProbCalc.hpp
 //then 
@@ -21,8 +25,7 @@
 
 using namespace std;  
 
-void printVector(const std::vector<char> &n)
-{
+void printVector(const std::vector<char> &n){
 
     cout << "State is :" << endl;
 
@@ -34,6 +37,7 @@ void printVector(const std::vector<char> &n)
 
 int SolveSATbpp(int n, double * SAT, int c, int i){
     //number of variables, SAT instance, number of clauses, number of iterations
+//     srand(time());
     srand(time(NULL));
     vector<char> s(n,'0');
     
@@ -44,16 +48,16 @@ int SolveSATbpp(int n, double * SAT, int c, int i){
     }
 
     bool solved = true;
-    unsigned long long int toPrint = 100000000;
-    unsigned long long int dP = 100000000;
-    int maxC = 0;
+//     unsigned long long int toPrint = 100000000;
+//     unsigned long long int dP = 100000000;
+//     int maxC = 0;
     int numIt = 0;
 
     for (int it = 0;it < i;it++){
         solved = true;
         for(int t = 0; t < c ; t++){
-
-            if( ((s[(abs((int)SAT[3*t])-1)] == '1' && (SAT[3*t]>0)) || (s[(abs((int)SAT[3*t])-1)] == '0' && (SAT[3*t]<0)) ) 
+//             numIt++;
+            if( ((s[(abs((int)SAT[3*t])-1)]   == '1' && (SAT[3*t]>0))   || (s[(abs((int)SAT[3*t])-1)]   == '0' && (SAT[3*t]<0)) ) 
             &&  ((s[(abs((int)SAT[3*t+1])-1)] == '1' && (SAT[3*t+1]>0)) || (s[(abs((int)SAT[3*t+1])-1)] == '0' && (SAT[3*t+1]<0)) )
             &&  ((s[(abs((int)SAT[3*t+2])-1)] == '1' && (SAT[3*t+2]>0)) || (s[(abs((int)SAT[3*t+2])-1)] == '0' && (SAT[3*t+2]<0)) ) ){
                 s[(abs((int)SAT[3*t])-1)] = '0' + (rand()%2);
@@ -64,20 +68,14 @@ int SolveSATbpp(int n, double * SAT, int c, int i){
             }
 
 //             it++;
-            if(t>maxC && solved){
-                maxC = t;
-            }
-            if(it > toPrint){
-                toPrint += dP;
-//                 cout << toPrint << " Max clause: " << maxC << " Current Clause: " << t << endl;
-            }
         }
 
         if(solved){
 //             cout << "Solved! Number of iterations = " << it << endl;
 //             printVector(s);
             numIt = it;
-            break;
+            return numIt;
+//             break;
         }
     }
 //     cout << "exited" << endl;

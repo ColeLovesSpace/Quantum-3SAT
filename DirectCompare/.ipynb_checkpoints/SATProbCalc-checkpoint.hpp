@@ -13,6 +13,9 @@ extern "C"
 int SolveSATbpp(int n, double * SAT, int c, int i);
 
 extern "C"
+int Shoning(int n, double * SAT, int c, int i);
+
+extern "C"
 double * SolveSATactual(int n, double *SAT, int c, int i, int v);
 
 extern "C"

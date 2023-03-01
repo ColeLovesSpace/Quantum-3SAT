@@ -83,6 +83,54 @@ int SolveSATbpp(int n, double * SAT, int c, int i){
     return numIt;
 }
 
+int Shoning(int n, double * SAT, int c, int i){
+    //number of variables, SAT instance, number of clauses, number of iterations
+//     srand(time());
+    srand(time(NULL));
+    vector<char> s(n,'0');
+    
+//     cout << "capacity : " << s.capacity() << endl;
+    
+    for(int w = 0; w<n; w++){
+        s[w] = '0' + (rand()%2);
+    }
+
+    bool solved = true;
+//     unsigned long long int toPrint = 100000000;
+//     unsigned long long int dP = 100000000;
+//     int maxC = 0;
+    int numIt = 0;
+    int bitToFlip = 0;
+
+    for (int it = 0;it < i;it++){
+        solved = true;
+        for(int t = 0; t < c ; t++){
+//             numIt++;
+            if( ((s[(abs((int)SAT[3*t])-1)]   == '1' && (SAT[3*t]>0))   || (s[(abs((int)SAT[3*t])-1)]   == '0' && (SAT[3*t]<0)) ) 
+            &&  ((s[(abs((int)SAT[3*t+1])-1)] == '1' && (SAT[3*t+1]>0)) || (s[(abs((int)SAT[3*t+1])-1)] == '0' && (SAT[3*t+1]<0)) )
+            &&  ((s[(abs((int)SAT[3*t+2])-1)] == '1' && (SAT[3*t+2]>0)) || (s[(abs((int)SAT[3*t+2])-1)] == '0' && (SAT[3*t+2]<0)) ) ){
+                bitToFlip = rand()%3;
+                s[(abs((int)SAT[3*t+bitToFlip])-1)] = '0' + (rand()%2);
+                solved = false;
+//                 it++;
+            }
+
+//             it++;
+        }
+
+        if(solved){
+//             cout << "Solved! Number of iterations = " << it << endl;
+//             printVector(s);
+            numIt = it;
+            return numIt;
+//             break;
+        }
+    }
+//     cout << "exited" << endl;
+//     printVector(s);
+    return numIt;
+}
+
 double SolveSAT(int n, double * SAT, int c, int i, int v){//number of variables, SAT instance, number of clauses, number of iterations
     for(int b = 0; b < v; b++){
         cout << SAT[b] << " ";

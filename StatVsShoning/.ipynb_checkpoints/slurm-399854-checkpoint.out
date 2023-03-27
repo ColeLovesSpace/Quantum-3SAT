@@ -1,0 +1,36 @@
+Number of cpu :  80
+BPP: [1.0]
+BPP time to solve:  -0.06488752365112305
+SHO: [1.0]
+Shoning time to solve:  -0.04688239097595215
+STAT: [1.0]
+Stat time to solve:  -0.2650589942932129
+Clauses 4 took -0.26507115364074707
+BPP: [1.0, 1.0]
+BPP time to solve:  -0.08241820335388184
+SHO: [1.0, 1.0]
+Shoning time to solve:  -0.05643343925476074
+STAT: [1.0, 1.0]
+Stat time to solve:  -0.3102855682373047
+Clauses 8 took -0.31029820442199707
+BPP: [1.0, 1.0, 1.0]
+BPP time to solve:  -0.05086398124694824
+SHO: [1.0, 1.0, 1.0]
+Shoning time to solve:  -0.05255603790283203
+STAT: [1.0, 1.0, 1.0]
+Stat time to solve:  -0.35240864753723145
+Clauses 12 took -0.3524208068847656
+BPP: [1.0, 1.0, 1.0, 1.0]
+BPP time to solve:  -0.06963992118835449
+SHO: [1.0, 1.0, 1.0, 1.0]
+Shoning time to solve:  -0.05755329132080078
+STAT: [1.0, 1.0, 1.0, 1.0]
+Stat time to solve:  -1.6283280849456787
+Clauses 16 took -1.6283438205718994
+BPP: [1.0, 1.0, 1.0, 1.0, 1.0]
+BPP time to solve:  -0.06533169746398926
+SHO: [1.0, 1.0, 1.0, 1.0, 1.0]
+Shoning time to solve:  -0.05080890655517578
+STAT: [1.0, 1.0, 1.0, 1.0, 1.0]
+Stat time to solve:  -0.6189546585083008
+Clauses 20 took -0.6189680099487305

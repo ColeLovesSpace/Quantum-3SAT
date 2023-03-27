@@ -1,0 +1,9 @@
+1
+Traceback (most recent call last):
+  File "testStatistics.py", line 181, in <module>
+    main()
+  File "testStatistics.py", line 101, in main
+    par = setup(n,nc,ns)
+  File "/home/ccoughlin/Quantum-3SAT /DirectCompare/QSAT.py", line 196, in setup
+    par['satList'] = SATset(nQ,nc,ns)
+NameError: name 'SATset' is not defined

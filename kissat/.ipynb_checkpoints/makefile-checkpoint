@@ -1,0 +1,17 @@
+all:
+	$(MAKE) -C "/home/ccoughlin/Quantum-3SAT /kissat/build"
+kissat:
+	$(MAKE) -C "home/ccoughlin/Quantum-3SAT /kissat/build" kissat
+tissat:
+	$(MAKE) -C "home/ccoughlin/Quantum-3SAT /kissat/build" tissat
+clean:
+	rm -f "/home/ccoughlin/Quantum-3SAT /kissat"/makefile
+	-$(MAKE) -C "/home/ccoughlin/Quantum-3SAT /kissat/build" clean
+	rm -rf "/home/ccoughlin/Quantum-3SAT /kissat/build"
+coverage:
+	$(MAKE) -C "/home/ccoughlin/Quantum-3SAT /kissat/build" coverage
+indent:
+	$(MAKE) -C "/home/ccoughlin/Quantum-3SAT /kissat/build" indent
+test:
+	$(MAKE) -C "/home/ccoughlin/Quantum-3SAT /kissat/build" test
+.PHONY: all clean coverage indent kissat test tissat

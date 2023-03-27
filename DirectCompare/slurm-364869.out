@@ -1,0 +1,38 @@
+1
+C++ time to solve:  -8.163645029067993
+C++ time to solve:  -8.159535884857178
+C++ time to solve:  -8.16578984260559
+C++ time to solve:  -8.183718204498291
+C++ time to solve:  -8.237900733947754
+C++ time to solve:  -8.174408435821533
+C++ time to solve:  -8.274287223815918
+C++ time to solve:  -8.23951268196106
+C++ time to solve:  -8.155343770980835
+C++ time to solve:  -8.144206762313843
+C++ time to solve:  -8.277446031570435
+C++ time to solve:  -8.222604513168335
+C++ time to solve:  -8.247900485992432
+C++ time to solve:  -8.1703462600708
+C++ time to solve:  -8.024918556213379
+C++ time to solve:  -8.112177610397339
+C++ time to solve:  -8.301163911819458
+C++ time to solve:  -8.237595319747925
+C++ time to solve:  -8.230948209762573
+C++ time to solve:  -8.6148099899292
+C++ time to solve:  -8.350961446762085
+C++ time to solve:  -8.117700338363647
+C++ time to solve:  -8.208487033843994
+C++ time to solve:  -8.27967357635498
+C++ time to solve:  -8.182782888412476
+C++ time to solve:  -8.255531549453735
+C++ time to solve:  -8.149669885635376
+C++ time to solve:  -8.085210084915161
+C++ time to solve:  -8.188921928405762
+C++ time to solve:  -8.058404684066772
+Clauses 1 took -253.05594611167908
+Traceback (most recent call last):
+  File "testStatistics.py", line 419, in <module>
+    main()
+  File "testStatistics.py", line 408, in main
+    xAxis = list(range(1,c+1))
+NameError: name 'c' is not defined

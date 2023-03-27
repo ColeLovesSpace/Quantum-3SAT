@@ -1,0 +1,69 @@
+Number of cpu :  80
+BPP: [0.0]
+BPP time to solve:  -0.04719400405883789
+SHO: [0.0]
+Shoning time to solve:  -0.03206586837768555
+STAT: [0.0]
+Stat time to solve:  -0.6011166572570801
+Clauses 200 took -0.6011288166046143
+BPP: [0.0, 0.0]
+BPP time to solve:  -0.046471357345581055
+SHO: [0.0, 0.0]
+Shoning time to solve:  -0.050511837005615234
+STAT: [0.0, 0.0]
+Stat time to solve:  -0.8320155143737793
+Clauses 294 took -0.8320291042327881
+BPP: [0.0, 0.0, 0.0]
+BPP time to solve:  -0.0944206714630127
+SHO: [0.0, 0.0, 0.0]
+Shoning time to solve:  -0.04482436180114746
+STAT: [0.0, 0.0, 0.0]
+Stat time to solve:  -1.8947339057922363
+Clauses 389 took -1.8947463035583496
+BPP: [0.0, 0.0, 0.0, 0.0]
+BPP time to solve:  -0.053619384765625
+SHO: [0.0, 0.0, 0.0, 0.0]
+Shoning time to solve:  -0.04773116111755371
+STAT: [0.0, 0.0, 0.0, 0.0]
+Stat time to solve:  -1.4271962642669678
+Clauses 484 took -1.4272089004516602
+BPP: [0.0, 0.0, 0.0, 0.0, 0.0]
+BPP time to solve:  -0.10297036170959473
+SHO: [0.0, 0.0, 0.0, 0.0, 0.0]
+Shoning time to solve:  -0.07601284980773926
+STAT: [0.0, 0.0, 0.0, 0.0, 0.0]
+Stat time to solve:  -3.1055843830108643
+Clauses 578 took -3.1056206226348877
+BPP: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+BPP time to solve:  -0.12384653091430664
+SHO: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Shoning time to solve:  -0.06876468658447266
+STAT: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Stat time to solve:  -3.563908338546753
+Clauses 673 took -3.5639214515686035
+BPP: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+BPP time to solve:  -0.07487273216247559
+SHO: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Shoning time to solve:  -0.06650042533874512
+STAT: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Stat time to solve:  -2.7864863872528076
+Clauses 768 took -2.786513090133667
+BPP: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+BPP time to solve:  -0.08289408683776855
+SHO: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Shoning time to solve:  -0.06579828262329102
+STAT: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Stat time to solve:  -3.7120203971862793
+Clauses 863 took -3.712034225463867
+BPP: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+BPP time to solve:  -0.08488750457763672
+SHO: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Shoning time to solve:  -0.07526230812072754
+STAT: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Stat time to solve:  -4.318735599517822
+Clauses 957 took -4.318751573562622
+BPP: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+BPP time to solve:  -0.09832334518432617
+SHO: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Shoning time to solve:  -0.07970714569091797
+slurmstepd: error: *** JOB 399860 ON cn074 CANCELLED AT 2023-03-26T22:16:43 ***

@@ -1,0 +1,41 @@
+./BPPSAT/SATS/UF250.1065.100/uf250-01.cnf
+Number of iterations: 6669
+True
+Number of flips 6669
+average flips:  6669.0
+total time:  0.42022275924682617
+./BPPSAT/SATS/UF250.1065.100/uf250-02.cnf
+Number of iterations: 75618
+True
+Number of flips 75618
+average flips:  41143.5
+total time:  5.4800214767456055
+./BPPSAT/SATS/UF250.1065.100/uf250-03.cnf
+H 4
+T 0.19999999999999996
+dH 0
+Number of iterations: 1705429
+True
+Number of flips 1705429
+average flips:  595905.3333333334
+total time:  106.61871361732483
+./BPPSAT/SATS/UF250.1065.100/uf250-04.cnf
+Number of iterations: 24619
+True
+Number of flips 24619
+average flips:  453083.75
+total time:  108.01407790184021
+./BPPSAT/SATS/UF250.1065.100/uf250-05.cnf
+Number of iterations: 15787
+True
+Number of flips 15787
+average flips:  365624.4
+total time:  109.09313607215881
+./BPPSAT/SATS/UF250.1065.100/uf250-06.cnf
+Number of iterations: 21099
+True
+Number of flips 21099
+average flips:  308203.5
+total time:  110.4606728553772
+./BPPSAT/SATS/UF250.1065.100/uf250-07.cnf
+slurmstepd: error: *** JOB 398046 ON cn075 CANCELLED AT 2023-03-20T11:37:33 ***

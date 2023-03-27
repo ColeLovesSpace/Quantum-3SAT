@@ -1,0 +1,16 @@
+Number of cpu :  80
+BPP: [1.0]
+BPP time to solve:  -0.06840205192565918
+SHO: [1.0]
+Shoning time to solve:  -0.057415008544921875
+STAT: [1.0]
+Stat time to solve:  -0.22835564613342285
+Clauses 1 took -0.22836685180664062
+Traceback (most recent call last):
+  File "testStatistics.py", line 219, in <module>
+    main()
+  File "testStatistics.py", line 216, in main
+    test3(n,ns,i,numIt,divs,start,end)
+  File "testStatistics.py", line 114, in test3
+    xAxis = list(np.linspace(dc/n,((ncc)*dc)/n,ncc,endpoint=True))
+NameError: name 'dc' is not defined

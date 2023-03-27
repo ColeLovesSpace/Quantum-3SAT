@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "testStatistics.py", line 209, in <module>
+    main()
+  File "testStatistics.py", line 198, in main
+    print("Number of cpu : ", multiprocessing.cpu_count())
+NameError: name 'multiprocessing' is not defined

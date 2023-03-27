@@ -1,0 +1,26 @@
+C++ time to solve:  -63.93708920478821
+C++ time to solve:  -65.29629349708557
+Stat time to build:  -4.76837158203125e-07
+Stat time to solve:  -682.5986547470093
+Clauses 10 took -814.2448818683624
+C++ time to solve:  -66.07417631149292
+C++ time to solve:  -65.59069085121155
+Stat time to build:  -1.430511474609375e-06
+Stat time to solve:  -705.6761424541473
+Clauses 10 took -1654.3976881504059
+Traceback (most recent call last):
+  File "testStatistics.py", line 235, in <module>
+    main()
+  File "testStatistics.py", line 232, in main
+    test3()
+  File "testStatistics.py", line 150, in test3
+    plt.plot(xAxis, BPPSATpi, c='blue')
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/pyplot.py", line 3019, in plot
+    return gca().plot(
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/axes/_axes.py", line 1605, in plot
+    lines = [*self._get_lines(*args, data=data, **kwargs)]
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/axes/_base.py", line 315, in __call__
+    yield from self._plot_args(this, kwargs)
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/axes/_base.py", line 501, in _plot_args
+    raise ValueError(f"x and y must have same first dimension, but "
+ValueError: x and y must have same first dimension, but have shapes (1,) and (2,)

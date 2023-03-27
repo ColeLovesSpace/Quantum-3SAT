@@ -1,0 +1,4 @@
+  File "testStatistics.py", line 153
+    print("Clauses " + str(nc) + " took " + str(start-time.time()))
+    ^
+IndentationError: unexpected indent

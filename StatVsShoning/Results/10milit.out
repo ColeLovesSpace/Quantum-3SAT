@@ -1,0 +1,46 @@
+../BPPSAT/SATS/UF250.1065.100/uf250-01.cnf
+250   1065
+Stat time to build:  -4.76837158203125e-07
+True
+28233
+True
+66208
+True
+24152
+True
+148878
+True
+11249187
+Stat time to solve:  -3922.6720530986786
+C++ time to solve:  -10145.722967386246
+C++ time to solve:  -8392.114256620407
+Clauses 1065 took -22460.53744149208
+0
+BPP: [0.0]
+SHO: [0.0]
+STAT: [1.0]
+../BPPSAT/SATS/UF250.1065.100/uf250-02.cnf
+250   1065
+Stat time to build:  -1.1920928955078125e-06
+True
+1103244
+True
+23932140
+True
+35450697
+True
+28070050
+True
+37017
+Stat time to solve:  -30261.102495908737
+C++ time to solve:  -10587.40233540535
+C++ time to solve:  -8888.82479929924
+Clauses 1065 took -49737.47801041603
+1
+BPP: [0.0, 0.0]
+SHO: [0.0, 0.0]
+STAT: [1.0, 1.0]
+../BPPSAT/SATS/UF250.1065.100/uf250-03.cnf
+250   1065
+Stat time to build:  -7.152557373046875e-07
+slurmstepd: error: *** JOB 398681 ON cn031 CANCELLED AT 2023-03-23T12:58:07 DUE TO TIME LIMIT ***

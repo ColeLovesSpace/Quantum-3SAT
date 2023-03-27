@@ -80,7 +80,7 @@ int SolveSATbpp(int n, double * SAT, int c, int i){
     }
 //     cout << "exited" << endl;
 //     printVector(s);
-    return numIt;
+    return i;
 }
 
 int Shoning(int n, double * SAT, int c, int i){
@@ -128,7 +128,7 @@ int Shoning(int n, double * SAT, int c, int i){
     }
 //     cout << "exited" << endl;
 //     printVector(s);
-    return numIt;
+    return i;
 }
 
 double SolveSAT(int n, double * SAT, int c, int i, int v){//number of variables, SAT instance, number of clauses, number of iterations

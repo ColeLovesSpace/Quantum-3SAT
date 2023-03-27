@@ -1,0 +1,26 @@
+Clauses 0 took -5.7220458984375e-06
+C++ time to solve:  -8.337631464004517
+C++ time to solve:  -8.208518505096436
+Clauses 1 took -19.47526979446411
+C++ time to solve:  -8.393685817718506
+C++ time to solve:  -8.418327569961548
+C++ time to solve:  -8.376229763031006
+C++ time to solve:  -8.391077041625977
+Clauses 2 took -38.954957485198975
+C++ time to solve:  -8.326019287109375
+C++ time to solve:  -8.274643182754517
+C++ time to solve:  -8.491579294204712
+C++ time to solve:  -8.497813940048218
+C++ time to solve:  -8.403644561767578
+C++ time to solve:  -8.533233880996704
+Clauses 3 took -58.69521617889404
+C++ time to solve:  -8.4356689453125
+C++ time to solve:  -8.586028099060059
+C++ time to solve:  -8.32240104675293
+C++ time to solve:  -8.50041151046753
+C++ time to solve:  -8.39346432685852
+C++ time to solve:  -8.343997478485107
+C++ time to solve:  -8.415668725967407
+C++ time to solve:  -8.583556413650513
+Clauses 4 took -78.93258714675903
+slurmstepd: error: *** JOB 364848 ON cn078 CANCELLED AT 2023-03-07T12:54:53 ***

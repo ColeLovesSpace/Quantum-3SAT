@@ -1,0 +1,13 @@
+C++ time to solve:  -66.9449667930603
+C++ time to solve:  -67.4681088924408
+Stat time to build:  -7.152557373046875e-07
+Stat time to solve:  -970.469920873642
+Clauses 10 took -1107.3943207263947
+Traceback (most recent call last):
+  File "testStatistics.py", line 235, in <module>
+    main()
+  File "testStatistics.py", line 232, in main
+    test3()
+  File "testStatistics.py", line 148, in test3
+    xAxis = list(range(1,ncc+1))*(10/n)
+TypeError: can't multiply sequence by non-int of type 'float'

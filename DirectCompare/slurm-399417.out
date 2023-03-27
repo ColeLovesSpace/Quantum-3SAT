@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "testStatistics.py", line 240, in <module>
+    main()
+  File "testStatistics.py", line 237, in main
+    test3()
+  File "testStatistics.py", line 69, in test3
+    par = setup(n,nc,ns)
+NameError: name 'setup' is not defined

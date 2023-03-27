@@ -1,0 +1,104 @@
+C++ time to solve:  -0.0009591579437255859
+C++ time to solve:  -0.000896453857421875
+C++ time to solve:  -0.0009045600891113281
+C++ time to solve:  -0.000972747802734375
+C++ time to solve:  -0.0008547306060791016
+C++ time to solve:  -0.0008711814880371094
+C++ time to solve:  -0.0008754730224609375
+C++ time to solve:  -0.0009503364562988281
+C++ time to solve:  -0.0008537769317626953
+C++ time to solve:  -0.000736236572265625
+C++ time to solve:  -0.000732421875
+C++ time to solve:  -0.0007121562957763672
+C++ time to solve:  -0.0007178783416748047
+C++ time to solve:  -0.0006861686706542969
+C++ time to solve:  -0.0007424354553222656
+C++ time to solve:  -0.0006520748138427734
+C++ time to solve:  -0.0006668567657470703
+C++ time to solve:  -0.0006842613220214844
+C++ time to solve:  -0.0007429122924804688
+C++ time to solve:  -0.0006825923919677734
+BPP: [1.0]
+C++ time to solve:  -0.0006783008575439453
+C++ time to solve:  -0.0007212162017822266
+C++ time to solve:  -0.0008146762847900391
+C++ time to solve:  -0.0006892681121826172
+C++ time to solve:  -0.0006732940673828125
+C++ time to solve:  -0.0006849765777587891
+C++ time to solve:  -0.000797271728515625
+C++ time to solve:  -0.0006721019744873047
+C++ time to solve:  -0.0006759166717529297
+C++ time to solve:  -0.00067901611328125
+C++ time to solve:  -0.0007476806640625
+C++ time to solve:  -0.0006787776947021484
+C++ time to solve:  -0.00067138671875
+C++ time to solve:  -0.0006725788116455078
+C++ time to solve:  -0.0007405281066894531
+C++ time to solve:  -0.0007102489471435547
+C++ time to solve:  -0.0007185935974121094
+C++ time to solve:  -0.0006489753723144531
+C++ time to solve:  -0.0007431507110595703
+C++ time to solve:  -0.0006818771362304688
+SHO: [1.0]
+STAT: [1.0]
+Clauses 4 took -0.10968899726867676
+Traceback (most recent call last):
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/_mathtext.py", line 2277, in parse
+    result = self._expression.parseString(s)
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/pyparsing.py", line 1955, in parseString
+    raise exc
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/pyparsing.py", line 3814, in parseImpl
+    raise ParseException(instring, loc, self.errmsg, self)
+pyparsing.ParseException: Expected end of text, found '$'  (at char 0), (line:1, col:1)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "testStatistics.py", line 197, in <module>
+    main()
+  File "testStatistics.py", line 194, in main
+    test3(n,ns,maxC,i,numIt,dc)
+  File "testStatistics.py", line 112, in test3
+    fig.savefig(name)
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/figure.py", line 3005, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 2255, in print_figure
+    result = print_method(
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 1669, in wrapper
+    return func(*args, **kwargs)
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/backends/backend_agg.py", line 508, in print_png
+    FigureCanvasAgg.draw(self)
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/backends/backend_agg.py", line 406, in draw
+    self.figure.draw(self.renderer)
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/artist.py", line 74, in draw_wrapper
+    result = draw(artist, renderer, *args, **kwargs)
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/artist.py", line 51, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/figure.py", line 2780, in draw
+    mimage._draw_list_compositing_images(
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/image.py", line 132, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/artist.py", line 51, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/_api/deprecation.py", line 431, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/axes/_base.py", line 2881, in draw
+    self._update_title_position(renderer)
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/axes/_base.py", line 2822, in _update_title_position
+    if title.get_window_extent(renderer).ymin < top:
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/text.py", line 903, in get_window_extent
+    bbox, info, descent = self._get_layout(self._renderer)
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/text.py", line 314, in _get_layout
+    w, h, d = renderer.get_text_width_height_descent(
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/backends/backend_agg.py", line 235, in get_text_width_height_descent
+    self.mathtext_parser.parse(s, self.dpi, prop)
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/mathtext.py", line 452, in parse
+    return self._parse_cached(s, dpi, prop, _force_standard_ps_fonts)
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/mathtext.py", line 473, in _parse_cached
+    box = self._parser.parse(s, font_output, fontsize, dpi)
+  File "/cm/shared/apps/conda-environments/python38/lib/python3.8/site-packages/matplotlib/_mathtext.py", line 2279, in parse
+    raise ValueError("\n".join(["",
+ValueError: 
+$\langle P(     ext{solved}|i) angle_{\Phi}$
+^
+Expected end of text, found '$'  (at char 0), (line:1, col:1)

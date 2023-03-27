@@ -1,0 +1,68 @@
+../BPPSAT/SATS/UF75.325.100/uf75-075.cnf
+75   325
+Stat time to build:  -2.384185791015625e-07
+True
+17
+True
+10858
+1000000
+1000000
+True
+229
+Stat time to solve:  -225.59789156913757
+C++ time to solve:  -21.040034770965576
+C++ time to solve:  -0.0984337329864502
+Clauses 325 took -246.74262690544128
+0
+BPP: [0.4]
+SHO: [1.0]
+STAT: [0.6]
+../BPPSAT/SATS/UF75.325.100/uf75-076.cnf
+75   325
+Stat time to build:  -7.152557373046875e-07
+1000000
+1000000
+1000000
+True
+16828
+1000000
+Stat time to solve:  -459.1142611503601
+C++ time to solve:  -27.826148986816406
+C++ time to solve:  -1.2480404376983643
+Clauses 325 took -488.19437527656555
+1
+BPP: [0.4, 0.2]
+SHO: [1.0, 1.0]
+STAT: [0.6, 0.2]
+../BPPSAT/SATS/UF75.325.100/uf75-077.cnf
+75   325
+Stat time to build:  -4.76837158203125e-07
+True
+973
+True
+79959
+True
+28
+True
+3725
+True
+135
+Stat time to solve:  -9.578942775726318
+C++ time to solve:  -0.5227310657501221
+C++ time to solve:  -0.0013055801391601562
+Clauses 325 took -10.106984615325928
+2
+BPP: [0.4, 0.2, 1.0]
+SHO: [1.0, 1.0, 1.0]
+STAT: [0.6, 0.2, 1.0]
+../BPPSAT/SATS/UF75.325.100/uf75-078.cnf
+75   325
+Stat time to build:  -4.76837158203125e-07
+True
+207
+True
+53868
+True
+113926
+True
+209961

@@ -1,0 +1,9 @@
+Number of cpu :  80
+BPP: [1.0]
+BPP time to solve:  -0.2091207504272461
+SHO: [1.0]
+Shoning time to solve:  -0.0937657356262207
+STAT: [1.0]
+Stat time to solve:  -78.4969642162323
+Clauses 150 took -78.4969732761383
+slurmstepd: error: *** JOB 407708 ON cn070 CANCELLED AT 2023-04-17T23:47:48 ***

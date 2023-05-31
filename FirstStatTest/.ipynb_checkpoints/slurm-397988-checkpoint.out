@@ -1,0 +1,49 @@
+./BPPSAT/SATS/UF250.1065.100/uf250-01.cnf
+Number of iterations: 96306
+True
+Number of flips 96306
+average flips:  96306.0
+total time:  2.317657709121704
+./BPPSAT/SATS/UF250.1065.100/uf250-02.cnf
+Number of iterations: 1760952
+True
+Number of flips 1760952
+average flips:  928629.0
+total time:  49.96585130691528
+./BPPSAT/SATS/UF250.1065.100/uf250-03.cnf
+Number of iterations: 2678656
+True
+Number of flips 2678656
+average flips:  1511971.3333333333
+total time:  117.08218002319336
+./BPPSAT/SATS/UF250.1065.100/uf250-04.cnf
+Number of iterations: 31527
+True
+Number of flips 31527
+average flips:  1141860.25
+total time:  117.93034362792969
+./BPPSAT/SATS/UF250.1065.100/uf250-05.cnf
+Number of iterations: 635444
+True
+Number of flips 635444
+average flips:  1040577.0
+total time:  134.36557340621948
+./BPPSAT/SATS/UF250.1065.100/uf250-06.cnf
+Number of iterations: 355590
+True
+Number of flips 355590
+average flips:  926412.5
+total time:  144.0185866355896
+./BPPSAT/SATS/UF250.1065.100/uf250-07.cnf
+Number of iterations: 4833491
+True
+Number of flips 4833491
+average flips:  1484566.5714285714
+total time:  270.6854474544525
+./BPPSAT/SATS/UF250.1065.100/uf250-08.cnf
+Number of iterations: 10467
+True
+Number of flips 10467
+average flips:  1300304.125
+total time:  271.08048462867737
+./BPPSAT/SATS/UF250.1065.100/uf250-09.cnf

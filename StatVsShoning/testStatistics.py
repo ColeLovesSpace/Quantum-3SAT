@@ -139,13 +139,17 @@ def try250():
 #   Initialize parameters for SAT instance
     
 #     maxC = 12*n
-    i = 1000000#int(n**3 * 4/100)
+    i = 100000#int(n**3 * 4/100)
     numIt = 5
     ns = 1
 
     BPPSATpi = []
     Shoningpi = []
     Statpi = []    
+    
+#     satList = []
+#     fo
+#     SAT ,n ,nc = getSATS(y+1)
     
     for y in range(10):
         BPPSATavg = 0
@@ -165,7 +169,7 @@ def try250():
         Statavg += cumulativeStat[-1]/numIt
 
     #   Run statistical test of modified Shonings algorithm
-        res = classicalSolve2(n,SAT,nc,i,numIt)
+        res = classicalSolve(n,SAT,nc,i,numIt)
         cutoff = [x for x in res if x < i]
         values, base = np.histogram(cutoff, bins=n**2)
     #     values, base = np.histogram(res, bins=n**2)
@@ -210,15 +214,16 @@ def main():
     
     print("Number of cpu : ", multiprocessing.cpu_count())
 #     Initialize parameters for SAT instance
-    n = 180
+    n = 10
     ns = 80
 #     maxC = 12*n
-    i = 100000000#n**2
+    i = 100000#n**2
     numIt = 100
     divs = 20
     start = 3
     end = 8
     test3(n,ns,i,numIt,divs,start,end)
+#     try250()
     
 if __name__ == "__main__":
     main()

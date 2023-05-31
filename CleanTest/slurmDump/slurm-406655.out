@@ -1,0 +1,61 @@
+[7]
+[[-1, -2, -3], [-1, 2, 3], [1, -2, 3], [1, 2, -3], [-1, -2, 3], [-1, 2, -3], [1, -2, -3], [2, 3, 4], [-2, -3, -4], [-2, -3, 4], [2, 3, 5], [-2, -3, -5], [-2, -3, 5], [2, 3, 6], [-2, -3, -6], [-2, -3, 6]]
+[1. 1.]
+[1.30124269 0.8510371 ]
+[1.27536079 0.74638563]
+[1.24584206 0.7165217 ]
+[2.89383542 0.95517494]
+[0.69806351 0.37588737]
+[0.95049299 0.92000172]
+Iteration 1 took -0.6527020931243896
+Iteration 2 took -1.2458858489990234
+Iteration 3 took -1.84303617477417
+Iteration 4 took -2.4405033588409424
+Iteration 5 took -3.04435396194458
+Iteration 6 took -3.651259422302246
+Iteration 7 took -4.286879301071167
+Iteration 8 took -4.814297676086426
+Iteration 9 took -5.403685569763184
+Iteration 10 took -6.0924882888793945
+Iteration 11 took -6.622041940689087
+Iteration 12 took -7.322137117385864
+Iteration 13 took -7.79500937461853
+Iteration 14 took -8.43632698059082
+Iteration 15 took -9.048855066299438
+Iteration 16 took -9.692351579666138
+16
+
+   Normal return from subroutine COBYLA
+
+   NFVALS =   13   F = 9.843750E-01    MAXCV = 0.000000E+00
+   X = 1.000000E+00   1.000000E+00
+
+   Normal return from subroutine COBYLA
+
+   NFVALS =   32   F = 8.920228E-01    MAXCV = 0.000000E+00
+   X = 1.301243E+00   8.510371E-01
+
+   Normal return from subroutine COBYLA
+
+   NFVALS =   38   F = 7.330797E-01    MAXCV = 0.000000E+00
+   X = 1.275361E+00   7.463856E-01
+
+   Normal return from subroutine COBYLA
+
+   NFVALS =   46   F = 5.882969E-01    MAXCV = 0.000000E+00
+   X = 1.245842E+00   7.165217E-01
+
+   Normal return from subroutine COBYLA
+
+   NFVALS =   38   F = 8.733969E-01    MAXCV = 0.000000E+00
+   X = 2.893835E+00   9.551749E-01
+
+   Normal return from subroutine COBYLA
+
+   NFVALS =   43   F = 4.618205E-01    MAXCV = 0.000000E+00
+   X = 6.980635E-01   3.758874E-01
+
+   Normal return from subroutine COBYLA
+
+   NFVALS =   49   F = 7.891352E-01    MAXCV = 0.000000E+00
+   X = 9.504930E-01   9.200017E-01

@@ -1,0 +1,10 @@
+../BPPSAT/SATS/UF250.1065.100/uf250-01.cnf
+250   1065
+Traceback (most recent call last):
+  File "testStatistics.py", line 229, in <module>
+    main()
+  File "testStatistics.py", line 226, in main
+    try250()
+  File "testStatistics.py", line 172, in try250
+    res = classicalSolve2(n,SAT,nc,i,numIt)
+NameError: name 'classicalSolve2' is not defined

@@ -1,0 +1,115 @@
+[7]
+[[-1, -2, -3], [-1, 2, 3], [1, -2, 3], [1, 2, -3], [-1, -2, 3], [-1, 2, -3], [1, -2, -3], [2, 3, 4], [-2, -3, -4], [-2, -3, 4]]
+[1. 1.]
+[1. 1.]
+[1.89557651 0.98669233]
+[1.86496868 1.19402265]
+[1.31314604 0.85641688]
+[1.01476443 0.66674228]
+[0.82756001 0.54590258]
+[2.47078247 1.42769839]
+[2.07124891 1.17397115]
+[1.75914716 1.056067  ]
+[1.80596222 1.20878621]
+[1.33269337 0.88865705]
+[0.39372696 0.26148131]
+[2.14258729 1.11975075]
+[1.94902259 1.05499821]
+[1.79120992 0.98235535]
+Iteration 1 took -0.12560820579528809
+Iteration 2 took -0.2160201072692871
+Iteration 3 took -0.3109457492828369
+Iteration 4 took -0.40413331985473633
+Iteration 5 took -0.5009386539459229
+Iteration 6 took -0.5933692455291748
+Iteration 7 took -0.6918544769287109
+Iteration 8 took -0.7847030162811279
+Iteration 9 took -0.8850889205932617
+Iteration 10 took -1.0513122081756592
+Iteration 11 took -1.0694119930267334
+Iteration 12 took -1.160529613494873
+Iteration 13 took -1.3248121738433838
+Iteration 14 took -1.3551359176635742
+Iteration 15 took -1.538438081741333
+Iteration 16 took -1.5403931140899658
+16
+
+   Normal return from subroutine COBYLA
+
+   NFVALS =   13   F = 9.375000E-01    MAXCV = 0.000000E+00
+   X = 1.000000E+00   1.000000E+00
+
+   Normal return from subroutine COBYLA
+
+   NFVALS =   13   F = 9.375000E-01    MAXCV = 0.000000E+00
+   X = 1.000000E+00   1.000000E+00
+
+   Normal return from subroutine COBYLA
+
+   NFVALS =   43   F = 6.863345E-01    MAXCV = 0.000000E+00
+   X = 1.895577E+00   9.866923E-01
+
+   Normal return from subroutine COBYLA
+
+   NFVALS =   45   F = 3.572922E-01    MAXCV = 0.000000E+00
+   X = 1.864969E+00   1.194023E+00
+
+   Normal return from subroutine COBYLA
+
+   NFVALS =   36   F = 2.838435E-01    MAXCV = 0.000000E+00
+   X = 1.313146E+00   8.564169E-01
+
+   Normal return from subroutine COBYLA
+
+   NFVALS =   36   F = 2.611585E-01    MAXCV = 0.000000E+00
+   X = 1.014764E+00   6.667423E-01
+
+   Normal return from subroutine COBYLA
+
+   NFVALS =   40   F = 2.506404E-01    MAXCV = 0.000000E+00
+   X = 8.275600E-01   5.459026E-01
+
+   Return from subroutine COBYLA because the MAXFUN limit has been reached.
+
+   NFVALS =   50   F = 4.662850E-01    MAXCV = 0.000000E+00
+   X = 2.470782E+00   1.427698E+00
+
+   Normal return from subroutine COBYLA
+
+   NFVALS =   45   F = 4.188693E-01    MAXCV = 0.000000E+00
+   X = 2.071249E+00   1.173971E+00
+
+   Return from subroutine COBYLA because the MAXFUN limit has been reached.
+
+   NFVALS =   50   F = 3.496528E-01    MAXCV = 0.000000E+00
+   X = 1.759147E+00   1.056067E+00
+
+   Normal return from subroutine COBYLA
+
+   NFVALS =   40   F = 4.329379E-01    MAXCV = 0.000000E+00
+   X = 1.805962E+00   1.208786E+00
+
+   Return from subroutine COBYLA because the MAXFUN limit has been reached.
+
+   NFVALS =   50   F = 3.024484E-01    MAXCV = 0.000000E+00
+   X = 1.332693E+00   8.886571E-01
+
+   Normal return from subroutine COBYLA
+
+   NFVALS =   39   F = 2.353487E-01    MAXCV = 0.000000E+00
+   X = 3.937270E-01   2.614813E-01
+
+   Normal return from subroutine COBYLA
+
+   NFVALS =   39   F = 4.531074E-01    MAXCV = 0.000000E+00
+   X = 2.142587E+00   1.119751E+00
+
+   Normal return from subroutine COBYLA
+
+   NFVALS =   39   F = 3.974779E-01    MAXCV = 0.000000E+00
+   X = 1.949023E+00   1.054998E+00
+
+   Normal return from subroutine COBYLA
+
+   NFVALS =   37   F = 3.709641E-01    MAXCV = 0.000000E+00
+   X = 1.791210E+00   9.823553E-01

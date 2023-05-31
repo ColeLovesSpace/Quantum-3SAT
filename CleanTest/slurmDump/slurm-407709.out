@@ -1,0 +1,19 @@
+Number of cpu :  80
+BPP: [1.0]
+SHO: [1.0]
+STAT: [1.0]
+Stat time to solve:  -23.400557041168213
+Clauses 150 took -23.400575160980225
+BPP: [1.0, 1.0]
+SHO: [1.0, 1.0]
+STAT: [1.0, 1.0]
+Stat time to solve:  -406.6633906364441
+Clauses 177 took -406.6634154319763
+BPP: [1.0, 1.0, 0.709]
+SHO: [1.0, 1.0, 0.7939999999999999]
+STAT: [1.0, 1.0, 1.0]
+Stat time to solve:  -1039.9203186035156
+Clauses 205 took -1039.9203386306763
+BPP: [1.0, 1.0, 0.709, 0.16399999999999998]
+SHO: [1.0, 1.0, 0.7939999999999999, 0.2125]
+slurmstepd: error: *** JOB 407709 ON cn069 CANCELLED AT 2023-04-18T00:48:26 DUE TO TIME LIMIT ***

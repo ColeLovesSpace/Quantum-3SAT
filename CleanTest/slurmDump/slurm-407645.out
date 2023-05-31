@@ -1,0 +1,30 @@
+Number of cpu :  80
+BPP: [1.0]
+BPP time to solve:  -0.139617919921875
+SHO: [1.0]
+Shoning time to solve:  -0.09968161582946777
+STAT: [1.0]
+Stat time to solve:  -76.20298051834106
+Clauses 150 took -76.20298910140991
+BPP: [1.0, 0.9935]
+BPP time to solve:  -132.31801843643188
+SHO: [1.0, 1.0]
+Shoning time to solve:  -2.332034111022949
+STAT: [1.0, 1.0]
+Stat time to solve:  -4699.178150653839
+Clauses 177 took -4699.178158760071
+BPP: [1.0, 0.9935, 0.7153750000000001]
+BPP time to solve:  -282.41526556015015
+SHO: [1.0, 1.0, 0.7375]
+Shoning time to solve:  -213.65605545043945
+STAT: [1.0, 1.0, 1.0]
+Stat time to solve:  -11515.56282377243
+Clauses 205 took -11515.5628323555
+BPP: [1.0, 0.9935, 0.7153750000000001, 0.164375]
+BPP time to solve:  -473.8586964607239
+SHO: [1.0, 1.0, 0.7375, 0.175]
+Shoning time to solve:  -388.4067997932434
+STAT: [1.0, 1.0, 1.0, 0.0]
+Stat time to solve:  -21199.763241052628
+Clauses 233 took -21199.763250350952
+slurmstepd: error: *** JOB 407645 ON cn018 CANCELLED AT 2023-04-18T13:48:18 ***

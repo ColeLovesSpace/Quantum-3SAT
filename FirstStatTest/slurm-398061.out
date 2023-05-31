@@ -1,0 +1,35 @@
+324392
+1296086
+StatSATtest.py:132: RuntimeWarning: overflow encountered in exp
+  pFlip = 1/(1+np.exp(dH/(T)))
+H 15254
+T 0.20400000000000001
+dH 0
+H 10719
+T 0.2
+dH 0
+H 8886
+T 0.2
+dH 0
+H 7687
+T 0.2
+dH 0
+H 6994
+T 0.2
+dH 0
+H 6381
+T 0.22000000000000003
+dH 0
+H 5956
+T 0.2
+dH 0
+H 5591
+T 0.20400000000000001
+dH 0
+H 5344
+T 0.22000000000000003
+dH 0
+H 5070
+T 0.2
+dH 0
+slurmstepd: error: *** JOB 398061 ON cn072 CANCELLED AT 2023-03-20T13:00:17 DUE TO TIME LIMIT ***

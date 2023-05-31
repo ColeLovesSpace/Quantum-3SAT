@@ -1,0 +1,13 @@
+324392
+1296086
+StatSATtest.py:132: RuntimeWarning: overflow encountered in exp
+  pFlip = 1/(1+np.exp(dH/(T)))
+H 27286
+T 0.15000000000000002
+dH 0
+H 21500
+T 0.05
+dH 0
+H 19915
+T 0.05
+dH 0

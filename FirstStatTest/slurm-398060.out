@@ -1,0 +1,506 @@
+./BPPSAT/SATS/UF250.1065.100/uf250-01.cnf
+Number of iterations: 27233
+True
+Number of flips 27233
+average flips:  27233.0
+total time:  1.194394826889038
+./BPPSAT/SATS/UF250.1065.100/uf250-02.cnf
+Number of iterations: 756706
+True
+Number of flips 756706
+average flips:  391969.5
+total time:  38.1369731426239
+./BPPSAT/SATS/UF250.1065.100/uf250-03.cnf
+Number of iterations: 16776
+True
+Number of flips 16776
+average flips:  266905.0
+total time:  38.99203538894653
+./BPPSAT/SATS/UF250.1065.100/uf250-04.cnf
+Number of iterations: 8953
+True
+Number of flips 8953
+average flips:  202417.0
+total time:  39.44237971305847
+./BPPSAT/SATS/UF250.1065.100/uf250-05.cnf
+Number of iterations: 12075
+True
+Number of flips 12075
+average flips:  164348.6
+total time:  40.07464933395386
+./BPPSAT/SATS/UF250.1065.100/uf250-06.cnf
+Number of iterations: 17060
+True
+Number of flips 17060
+average flips:  139800.5
+total time:  40.953354835510254
+./BPPSAT/SATS/UF250.1065.100/uf250-07.cnf
+Number of iterations: 308223
+True
+Number of flips 308223
+average flips:  163860.85714285713
+total time:  55.81803369522095
+./BPPSAT/SATS/UF250.1065.100/uf250-08.cnf
+Number of iterations: 95935
+True
+Number of flips 95935
+average flips:  155370.125
+total time:  60.09504795074463
+./BPPSAT/SATS/UF250.1065.100/uf250-09.cnf
+Number of iterations: 911014
+True
+Number of flips 911014
+average flips:  239330.55555555556
+total time:  103.79758381843567
+./BPPSAT/SATS/UF250.1065.100/uf250-010.cnf
+H 2
+T 0.2
+dH 0
+Number of iterations: 1695521
+True
+Number of flips 1695521
+average flips:  384949.6
+total time:  182.03735780715942
+./BPPSAT/SATS/UF250.1065.100/uf250-011.cnf
+H 2
+T 0.20400000000000001
+dH 0
+H 3
+T 0.2
+dH 0
+H 2
+T 0.2
+dH 0
+H 3
+T 0.2
+dH 1
+H 5
+T 0.20400000000000001
+dH 0
+H 1
+T 0.2
+dH -1
+H 2
+T 0.20400000000000001
+dH 0
+H 5
+T 0.20400000000000001
+dH 0
+H 2
+T 0.20400000000000001
+dH 0
+H 3
+T 0.20400000000000001
+dH 0
+H 3
+T 0.2
+dH 0
+H 3
+T 0.20800000000000002
+dH 0
+H 4
+T 0.2
+dH 0
+Number of iterations: 13443394
+True
+Number of flips 13443394
+average flips:  1572080.9090909092
+total time:  893.4850487709045
+./BPPSAT/SATS/UF250.1065.100/uf250-012.cnf
+Number of iterations: 17382
+True
+Number of flips 17382
+average flips:  1442522.6666666667
+total time:  894.3126738071442
+./BPPSAT/SATS/UF250.1065.100/uf250-013.cnf
+Number of iterations: 30975
+True
+Number of flips 30975
+average flips:  1333942.076923077
+total time:  895.927889585495
+./BPPSAT/SATS/UF250.1065.100/uf250-014.cnf
+Number of iterations: 25035
+True
+Number of flips 25035
+average flips:  1240448.7142857143
+total time:  897.2141675949097
+./BPPSAT/SATS/UF250.1065.100/uf250-015.cnf
+Number of iterations: 31301
+True
+Number of flips 31301
+average flips:  1159838.8666666667
+total time:  898.7217745780945
+./BPPSAT/SATS/UF250.1065.100/uf250-016.cnf
+Number of iterations: 11204
+True
+Number of flips 11204
+average flips:  1088049.1875
+total time:  899.2834725379944
+./BPPSAT/SATS/UF250.1065.100/uf250-017.cnf
+Number of iterations: 54416
+True
+Number of flips 54416
+average flips:  1027247.2352941176
+total time:  901.7057058811188
+./BPPSAT/SATS/UF250.1065.100/uf250-018.cnf
+Number of iterations: 437910
+True
+Number of flips 437910
+average flips:  994506.2777777778
+total time:  920.891149520874
+./BPPSAT/SATS/UF250.1065.100/uf250-019.cnf
+Number of iterations: 4550
+True
+Number of flips 4550
+average flips:  942403.3157894737
+total time:  921.1606996059418
+./BPPSAT/SATS/UF250.1065.100/uf250-020.cnf
+Number of iterations: 86397
+True
+Number of flips 86397
+average flips:  899603.0
+total time:  925.2770328521729
+./BPPSAT/SATS/UF250.1065.100/uf250-021.cnf
+Number of iterations: 9707
+True
+Number of flips 9707
+average flips:  857227.0
+total time:  925.7729539871216
+./BPPSAT/SATS/UF250.1065.100/uf250-022.cnf
+Number of iterations: 477306
+True
+Number of flips 477306
+average flips:  839957.8636363636
+total time:  948.872701883316
+./BPPSAT/SATS/UF250.1065.100/uf250-023.cnf
+Number of iterations: 736442
+True
+Number of flips 736442
+average flips:  835457.1739130435
+total time:  983.086256980896
+./BPPSAT/SATS/UF250.1065.100/uf250-024.cnf
+H 7
+T 0.2
+dH 0
+H 3
+T 0.20400000000000001
+dH 0
+H 5
+T 0.20400000000000001
+dH 0
+H 3
+T 0.2
+dH 0
+H 5
+T 0.20400000000000001
+dH 0
+H 3
+T 0.20400000000000001
+dH 0
+H 5
+T 0.2
+dH 0
+H 7
+T 0.2
+dH 0
+H 2
+T 0.2
+dH 0
+H 3
+T 0.2
+dH 0
+H 6
+T 0.2
+dH 0
+Number of iterations: 11273828
+True
+Number of flips 11273828
+average flips:  1270389.2916666667
+total time:  1577.9518465995789
+./BPPSAT/SATS/UF250.1065.100/uf250-025.cnf
+Number of iterations: 38184
+True
+Number of flips 38184
+average flips:  1221101.08
+total time:  1579.662618637085
+./BPPSAT/SATS/UF250.1065.100/uf250-026.cnf
+Number of iterations: 888143
+True
+Number of flips 888143
+average flips:  1208295.0
+total time:  1620.1041841506958
+./BPPSAT/SATS/UF250.1065.100/uf250-027.cnf
+Number of iterations: 21111
+True
+Number of flips 21111
+average flips:  1164325.2222222222
+total time:  1621.2829275131226
+./BPPSAT/SATS/UF250.1065.100/uf250-028.cnf
+Number of iterations: 670381
+True
+Number of flips 670381
+average flips:  1146684.357142857
+total time:  1652.8108105659485
+./BPPSAT/SATS/UF250.1065.100/uf250-029.cnf
+H 5
+T 0.2
+dH 0
+Number of iterations: 1561195
+True
+Number of flips 1561195
+average flips:  1160977.8275862068
+total time:  1727.4312505722046
+./BPPSAT/SATS/UF250.1065.100/uf250-030.cnf
+Number of iterations: 322687
+True
+Number of flips 322687
+average flips:  1133034.8
+total time:  1741.7998056411743
+./BPPSAT/SATS/UF250.1065.100/uf250-031.cnf
+H 4
+T 0.20400000000000001
+dH 0
+H 2
+T 0.2
+dH 0
+Number of iterations: 2050746
+True
+Number of flips 2050746
+average flips:  1162638.3870967743
+total time:  1832.4502840042114
+./BPPSAT/SATS/UF250.1065.100/uf250-032.cnf
+H 3
+T 0.2
+dH 0
+Number of iterations: 1563197
+True
+Number of flips 1563197
+average flips:  1175155.84375
+total time:  1910.3668780326843
+./BPPSAT/SATS/UF250.1065.100/uf250-033.cnf
+Number of iterations: 50080
+True
+Number of flips 50080
+average flips:  1141062.6363636365
+total time:  1912.7003581523895
+./BPPSAT/SATS/UF250.1065.100/uf250-034.cnf
+H 4
+T 0.2
+dH 0
+Number of iterations: 1003875
+True
+Number of flips 1003875
+average flips:  1137027.705882353
+total time:  1959.7784645557404
+./BPPSAT/SATS/UF250.1065.100/uf250-035.cnf
+Number of iterations: 4028
+True
+Number of flips 4028
+average flips:  1104656.2857142857
+total time:  1960.0692377090454
+./BPPSAT/SATS/UF250.1065.100/uf250-036.cnf
+H 4
+T 0.20800000000000002
+dH 0
+H 3
+T 0.20400000000000001
+dH 0
+H 1
+T 0.2
+dH 0
+H 2
+T 0.2
+dH 0
+Number of iterations: 4183208
+True
+Number of flips 4183208
+average flips:  1190171.611111111
+total time:  2146.171590566635
+./BPPSAT/SATS/UF250.1065.100/uf250-037.cnf
+Number of iterations: 18041
+True
+Number of flips 18041
+average flips:  1158492.4054054054
+total time:  2147.0222516059875
+./BPPSAT/SATS/UF250.1065.100/uf250-038.cnf
+Number of iterations: 495678
+True
+Number of flips 495678
+average flips:  1141049.9210526317
+total time:  2170.345995426178
+./BPPSAT/SATS/UF250.1065.100/uf250-039.cnf
+Number of iterations: 30722
+True
+Number of flips 30722
+average flips:  1112579.9743589743
+total time:  2171.7428896427155
+./BPPSAT/SATS/UF250.1065.100/uf250-040.cnf
+Number of iterations: 1773
+True
+Number of flips 1773
+average flips:  1084809.8
+total time:  2171.93040060997
+./BPPSAT/SATS/UF250.1065.100/uf250-041.cnf
+Number of iterations: 151288
+True
+Number of flips 151288
+average flips:  1062040.975609756
+total time:  2178.965789794922
+./BPPSAT/SATS/UF250.1065.100/uf250-042.cnf
+Number of iterations: 995679
+True
+Number of flips 995679
+average flips:  1060460.9285714286
+total time:  2224.4901859760284
+./BPPSAT/SATS/UF250.1065.100/uf250-043.cnf
+H 5
+T 0.2
+dH 0
+Number of iterations: 1687689
+True
+Number of flips 1687689
+average flips:  1075047.6279069767
+total time:  2304.646004676819
+./BPPSAT/SATS/UF250.1065.100/uf250-044.cnf
+Number of iterations: 262543
+True
+Number of flips 262543
+average flips:  1056581.6136363635
+total time:  2314.776431083679
+./BPPSAT/SATS/UF250.1065.100/uf250-045.cnf
+H 7
+T 0.2
+dH 0
+H 2
+T 0.2
+dH 0
+H 2
+T 0.2
+dH 0
+H 3
+T 0.2
+dH 0
+H 5
+T 0.2
+dH 0
+H 4
+T 0.2
+dH 0
+H 2
+T 0.2
+dH 0
+H 4
+T 0.2
+dH 0
+H 2
+T 0.2
+dH 0
+H 3
+T 0.2
+dH 0
+H 2
+T 0.2
+dH 0
+H 3
+T 0.20400000000000001
+dH 0
+H 6
+T 0.2
+dH 0
+H 4
+T 0.2
+dH 0
+H 2
+T 0.2
+dH 0
+H 4
+T 0.2
+dH 0
+H 3
+T 0.2
+dH 0
+H 5
+T 0.2
+dH 0
+Number of iterations: 18316299
+True
+Number of flips 18316299
+average flips:  1440130.888888889
+total time:  3123.043196439743
+./BPPSAT/SATS/UF250.1065.100/uf250-046.cnf
+Number of iterations: 234106
+True
+Number of flips 234106
+average flips:  1413912.956521739
+total time:  3134.2867794036865
+./BPPSAT/SATS/UF250.1065.100/uf250-047.cnf
+Number of iterations: 86193
+True
+Number of flips 86193
+average flips:  1385663.5957446808
+total time:  3137.788476228714
+./BPPSAT/SATS/UF250.1065.100/uf250-048.cnf
+H 2
+T 0.2
+dH 0
+Number of iterations: 1262465
+True
+Number of flips 1262465
+average flips:  1383096.9583333333
+total time:  3198.123514175415
+./BPPSAT/SATS/UF250.1065.100/uf250-049.cnf
+Number of iterations: 17658
+True
+Number of flips 17658
+average flips:  1355230.857142857
+total time:  3198.9379160404205
+./BPPSAT/SATS/UF250.1065.100/uf250-050.cnf
+Number of iterations: 330203
+True
+Number of flips 330203
+average flips:  1334730.3
+total time:  3213.84423828125
+./BPPSAT/SATS/UF250.1065.100/uf250-051.cnf
+Number of iterations: 284832
+True
+Number of flips 284832
+average flips:  1314144.0588235294
+total time:  3226.5819516181946
+./BPPSAT/SATS/UF250.1065.100/uf250-052.cnf
+Number of iterations: 324939
+True
+Number of flips 324939
+average flips:  1295120.8846153845
+total time:  3241.5216624736786
+./BPPSAT/SATS/UF250.1065.100/uf250-053.cnf
+Number of iterations: 84778
+True
+Number of flips 84778
+average flips:  1272284.2264150945
+total time:  3245.6871922016144
+./BPPSAT/SATS/UF250.1065.100/uf250-054.cnf
+H 3
+T 0.2
+dH 0
+H 3
+T 0.2
+dH 0
+H 3
+T 0.2
+dH 0
+H 3
+T 0.2
+dH 0
+H 4
+T 0.2
+dH 0
+H 2
+T 0.20400000000000001
+dH 0
+H 2
+T 0.2
+dH 0
+H 3
+T 0.2
+dH 0
+slurmstepd: error: *** JOB 398060 ON cn074 CANCELLED AT 2023-03-20T12:54:47 DUE TO TIME LIMIT ***

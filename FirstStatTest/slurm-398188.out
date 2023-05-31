@@ -1,0 +1,11 @@
+./BPPSAT/SATS/UF250.1065.100/uf250-01.cnf
+Traceback (most recent call last):
+  File "StatSATtest.py", line 397, in <module>
+    main()
+  File "StatSATtest.py", line 393, in main
+    test250()
+  File "StatSATtest.py", line 357, in test250
+    num = g.solveSATclause(100000000,0.2)
+  File "StatSATtest.py", line 178, in solveSATclause
+    for c in this.clauses:
+NameError: name 'this' is not defined

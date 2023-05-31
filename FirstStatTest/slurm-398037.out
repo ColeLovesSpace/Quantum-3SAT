@@ -1,0 +1,74 @@
+./BPPSAT/SATS/UF250.1065.100/uf250-01.cnf
+Number of iterations: 8876
+True
+Number of flips 8876
+average flips:  8876.0
+total time:  0.4283416271209717
+./BPPSAT/SATS/UF250.1065.100/uf250-02.cnf
+H 5
+T 0.2
+dH 0
+H 2
+T 0.2
+dH 0
+H 3
+T 0.2
+dH 0
+Number of iterations: 3300860
+True
+Number of flips 3300860
+average flips:  1654868.0
+total time:  156.85363173484802
+./BPPSAT/SATS/UF250.1065.100/uf250-03.cnf
+H 2
+T 0.2
+dH 0
+H 2
+T 0.2
+dH 0
+Number of iterations: 2146984
+True
+Number of flips 2146984
+average flips:  1818906.6666666667
+total time:  247.18024921417236
+./BPPSAT/SATS/UF250.1065.100/uf250-04.cnf
+Number of iterations: 28607
+True
+Number of flips 28607
+average flips:  1371331.75
+total time:  248.37372088432312
+./BPPSAT/SATS/UF250.1065.100/uf250-05.cnf
+Number of iterations: 204979
+True
+Number of flips 204979
+average flips:  1138061.2
+total time:  257.37449645996094
+./BPPSAT/SATS/UF250.1065.100/uf250-06.cnf
+Number of iterations: 82443
+True
+Number of flips 82443
+average flips:  962124.8333333334
+total time:  261.50491523742676
+./BPPSAT/SATS/UF250.1065.100/uf250-07.cnf
+Number of iterations: 558347
+True
+Number of flips 558347
+average flips:  904442.2857142857
+total time:  287.0658040046692
+./BPPSAT/SATS/UF250.1065.100/uf250-08.cnf
+Number of iterations: 143640
+True
+Number of flips 143640
+average flips:  809342.0
+total time:  294.0098388195038
+./BPPSAT/SATS/UF250.1065.100/uf250-09.cnf
+H 1
+T 0.20004000000000002
+dH 0
+H 3
+T 0.2
+dH 1
+H 2
+T 0.2
+dH 1
+slurmstepd: error: *** JOB 398037 ON cn071 CANCELLED AT 2023-03-20T11:22:58 ***

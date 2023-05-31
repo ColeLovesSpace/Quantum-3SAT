@@ -435,7 +435,7 @@ def test250():
         g = Graph(n,SAT)
     #     print("Hamiltonian: ", g.H)
     #     g.printState()
-        num = g.solveSATclause(100000000,0.2)
+        num = g.solveSAT(100000000,0.2)
         times.append(time.time()-t)
         nflips.append(num)
     #     g.printState()
@@ -449,7 +449,7 @@ def test250():
         plt.plot(times,c='red')
         plt.plot(nflips,c='blue')
 
-        name = "plots2/StatTest/factorio{:0>3}.png".format(5)
+        name = "plots2/factorio{:0>3}.png".format(5)
         plt.savefig(name)
         
 def testRSA():
@@ -481,7 +481,7 @@ def classicalSolveStat(n,SAT,nc,i,numIt):
     start = time.time()
     stepList = []
     
-    print("Stat time to build: " , start - time.time())
+#     print("Stat time to build: " , start - time.time())
     start = time.time()
     for x in range(numIt):
         g = Graph(n,SAT)
@@ -489,7 +489,7 @@ def classicalSolveStat(n,SAT,nc,i,numIt):
         stepList.append(its)
 #         print(stepList[-1])
     
-    print("Stat time to solve: " , start - time.time())
+#     print("Stat time to solve: " , start - time.time())
     
     return stepList
 # def main():

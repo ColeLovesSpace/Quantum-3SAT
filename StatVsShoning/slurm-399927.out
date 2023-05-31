@@ -6,3 +6,11 @@ Shoning time to solve:  -1.0028212070465088
 STAT: [1.0]
 Stat time to solve:  -69.73684597015381
 Clauses 540 took -69.73703956604004
+BPP: [1.0, 0.9643749999999999]
+BPP time to solve:  -70345.80600428581
+SHO: [1.0, 1.0]
+Shoning time to solve:  -12.846158504486084
+STAT: [1.0, 1.0]
+Stat time to solve:  -459.6545317173004
+Clauses 587 took -459.6545670032501
+slurmstepd: error: *** JOB 399927 ON cn038 CANCELLED AT 2023-03-28T09:30:47 DUE TO TIME LIMIT ***

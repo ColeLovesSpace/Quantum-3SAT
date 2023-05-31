@@ -1,0 +1,14 @@
+Number of cpu :  80
+TimeToQueue:  -1.4972262382507324
+BPP: [1.0]
+SHO: [1.0]
+Traceback (most recent call last):
+  File "testStatistics.py", line 371, in <module>
+    main()
+  File "testStatistics.py", line 368, in main
+    test4(n,ns,i,numIt,divs,start,end)
+  File "testStatistics.py", line 318, in test4
+    results = [ar.get() for ar in async_resultsStat]
+  File "testStatistics.py", line 318, in <listcomp>
+    results = [ar.get() for ar in async_resultsStat]
+AttributeError: 'list' object has no attribute 'get'

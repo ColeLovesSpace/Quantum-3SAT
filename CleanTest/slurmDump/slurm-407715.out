@@ -1,0 +1,13 @@
+Number of cpu :  80
+TimeToQueue:  -1.8737728595733643
+BPP: [0.99]
+SHO: [0.99]
+STAT: [1.0]
+Clauses 60 took -70.48995399475098
+BPP: [0.99, 1.93]
+SHO: [0.99, 0.94]
+STAT: [1.0, 1.0]
+Clauses 71 took -13.710490226745605
+BPP: [0.99, 1.93, 2.7646]
+SHO: [0.99, 0.94, 0.84]
+slurmstepd: error: *** JOB 407715 ON cn069 CANCELLED AT 2023-04-18T00:57:53 ***

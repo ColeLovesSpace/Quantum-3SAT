@@ -3,9 +3,9 @@ from Shonings import *
 from StatSATtest import *
 import multiprocessing
 from multiprocessing import Process, Pool
+from matplotlib.pyplot import cm
 
 # Exhaustive search for solution
-
 def checkSAT(SAT, state, c, n):
         
     for t in range(c):
@@ -400,6 +400,145 @@ def test4(n,ns,i,numIt,divs,begin,end):
         fig.savefig(name)
         fig.clf()
 
+def testN(nstart,nend,divn,ns,it,numIt,divs,begin,end,path):
+    
+    plt.rcParams['text.usetex'] = False
+    
+    cores = multiprocessing.cpu_count()
+    pool = Pool(cores)
+    
+    nameS = "Schonings Phase Transition "+" i-max=n^2"+" s={}".format(numIt)+" #SAT={}".format(ns)
+    figS = plt.figure(figsize=(9, 5))
+    figS.suptitle(nameS)
+    axS = figS.add_subplot(111)
+    plt.rcParams['text.usetex'] = True
+    axS.set_title(r'$\langle P($solved$|i) \rangle_{\Phi}$', loc='left', fontstyle='oblique', fontsize='medium')
+    
+    plt.rcParams['text.usetex'] = False
+    nameM = "ModSchonings Phase Transition "+" i-max=n^2"+" s={}".format(numIt)+" #SAT={}".format(ns)
+    figM = plt.figure(figsize=(9, 5))
+    figM.suptitle(nameM)
+    axM = figM.add_subplot(111)
+    plt.rcParams['text.usetex'] = True
+    axM.set_title(r'$\langle P($solved$|i) \rangle_{\Phi}$', loc='left', fontstyle='oblique', fontsize='medium')
+    
+    plt.rcParams['text.usetex'] = False
+    nameSub = "ModSchonings - Schonings Phase Transition "+" i-max=n^2"+" s={}".format(numIt)+" #SAT={}".format(ns)
+    figSub = plt.figure(figsize=(9, 5))
+    figSub.suptitle(nameSub)
+    axSub = figSub.add_subplot(111)
+    plt.rcParams['text.usetex'] = True
+    axSub.set_title(r'$\langle P($solved$|i) \rangle_{\Phi}$', loc='left', fontstyle='oblique', fontsize='medium')
+        
+    color = iter(cm.rainbow(np.linspace(0, 1, divn)))
+
+    for nv in np.linspace(nstart,nend,divn,endpoint=True):
+        c = next(color)
+        n = int(nv)
+        i = n**2
+        BPPSATpi = []
+        Shoningpi = []
+
+        BPPSATpiStep = []
+        ShoningpiStep = []
+    #     (maxC/n)
+        index = 0
+        start = time.time()
+        async_resultsC = []
+        async_resultsS = []
+        for ncc in np.linspace(begin*n,end*n,divs,endpoint=True):
+
+            nc = int(ncc)
+            print(nc)
+            par = setup(n,nc,ns)
+
+            async_resultsC.append([])
+            async_resultsS.append([])
+
+            for SAT in par['satList']:
+                #   Run statistical test of modified Shonings algorithm
+                async_resultsC[index].append(pool.apply_async(classicalSolve,args=(n,SAT,nc,i,numIt)))
+                #   Run statistical test of regular Shonings algorithm
+                async_resultsS[index].append(pool.apply_async(classicalSolveS,args=(n,SAT,nc,i,numIt)))
+
+            index+=1
+
+        print("TimeToQueue: " , start - time.time())
+        
+        index = 0
+    #     start = time.time()
+        for ncc in np.linspace(begin*n,end*n,divs,endpoint=True):
+
+            BPPSATavg = 0
+            BPPSATavgStep = 0
+            results = []
+            nc = int(ncc)
+            start = time.time()
+            results = [ar.get() for ar in async_resultsC[index]]
+            for res in results:
+                cutoff = [x for x in res if x < i]
+                values, base = np.histogram(cutoff, bins=n**2)
+                #evaluate the cumulative
+                tots = 0
+                for x in res:
+                    tots += x/i
+                if len(res)>0:
+                    BPPSATavgStep += tots/len(res)
+                cumulative = np.cumsum(values)
+                BPPSATavg += cumulative[-1]/numIt
+            BPPSATpi.append(BPPSATavg/ns)
+            BPPSATpiStep.append(BPPSATavgStep/ns)
+            print("BPP:",BPPSATpi)
+
+    #         print("BPP time to solve: " , start - time.time())
+
+
+            start = time.time()
+            Shoningavg = 0
+            ShoningavgStep = 0
+            results = []
+            results = [ar.get() for ar in async_resultsS[index]]
+            for res in results:
+                cutoffS = [x for x in res if x < i]
+                valuesS, baseS = np.histogram(cutoffS, bins=n**2)
+                #evaluate the cumulative
+                tots = 0
+                for x in res:
+                    tots += x/i
+                if len(res)>0:
+                    ShoningavgStep += tots/len(res)
+                cumulativeS = np.cumsum(valuesS)
+                Shoningavg += cumulativeS[-1]/numIt
+            Shoningpi.append(Shoningavg/ns)
+            ShoningpiStep.append(ShoningavgStep/ns)
+            print("SHO:",Shoningpi)
+    #         print("Shoning time to solve: " , start - time.time())
+            index+=1
+
+        xAxis = np.linspace(begin,end,divs,endpoint=True)
+
+        axM.plot(xAxis, BPPSATpi, c=c,label="n="+str(n))
+        axS.plot(xAxis, Shoningpi, c=c,label="n="+str(n))
+        axM.legend()
+        axS.legend()
+        axM.set_xlabel(r'$\frac{c}{n}$')
+        axS.set_xlabel(r'$\frac{c}{n}$')
+        nameM = path+"Mn{:0>3}b".format(n)+"i{}".format(i)+"nI{}".format(numIt)+"ns{}".format(ns)+".png"
+        nameS = path+"Sn{:0>3}b".format(n)+"i{}".format(i)+"nI{}".format(numIt)+"ns{}".format(ns)+".png"
+        figM.savefig(nameM)
+        figS.savefig(nameS)
+        
+        subs = []
+        for y in range(len(BPPSATpi)):
+            subs.append(BPPSATpi[y] - Shoningpi[y])
+
+        axSub.plot(xAxis, subs, c=c,label="n="+str(n))
+        axSub.legend()
+        axSub.set_xlabel(r'$\frac{c}{n}$')
+        nameSub = path+"Sub-n{:0>3}b".format(n)+"i{}".format(i)+"nI{}".format(numIt)+"ns{}".format(ns)+".png"
+        figSub.savefig(nameSub)
+
+
 def main():
     
     print("Number of cpu : ", multiprocessing.cpu_count())
@@ -415,10 +554,22 @@ def main():
     print(n)
     test4(n,ns,i,numIt,divs,start,end)
     
+def main3():
+    nstart = 30
+    nend = 300
+    divn = 15
+    ns = 300
+    i = 1000000
+    numIt = 300
+    divs = 15
+    begin = 3
+    end = 6.5
+    path = "plots/BigRunAbove/"
+    testN(nstart,nend,divn,ns,i,numIt,divs,begin,end,path)
     
 def main2():
     try250()
     
 if __name__ == "__main__":
-    main()
+    main3()
 

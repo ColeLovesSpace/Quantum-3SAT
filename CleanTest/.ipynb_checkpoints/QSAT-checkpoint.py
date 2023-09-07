@@ -47,6 +47,11 @@ def had3(e,a,b,c,circuit,par):
     circuit.ch(e,abs(b)-1)
     circuit.ch(e,abs(c)-1)
     
+def y3(e,a,b,c,circuit,par):
+    circuit.cy(e,abs(a)-1)
+    circuit.cy(e,abs(b)-1)
+    circuit.cy(e,abs(c)-1)
+    
 def not3(e,a,b,c,circuit,par):
     circuit.cnot(e,abs(a)-1)
     circuit.cnot(e,abs(b)-1)
@@ -83,6 +88,10 @@ def hadAll(e,circuit,par):
 #     circuit.ch(e,abs(a)-1)
 #     circuit.ch(e,abs(b)-1)
 #     circuit.ch(e,abs(c)-1)
+
+def YAll(e,circuit,par):
+    for b in range(par['nQ']):
+        circuit.cy(e,b)
 
 def notAll(e,circuit,par):
     for b in range(par['nQ']):
@@ -135,25 +144,49 @@ def endRem(a,b,c,circuit):
     if c < 0:
         circuit.x(abs(c)-1)
         
+def Z3(circuit,a,b,c,h):
+    circuit.cz(h,abs(a)-1)
+    circuit.cz(h,abs(b)-1)
+    circuit.cz(h,abs(c)-1)
+    
 def phase3(circuit,a,b,c,h):
-    num = (a/abs(a))*2**0 + (b/abs(b))*2**1 + (c/abs(c))*2**2
-    circuit.crz(num*pi,h,abs(a)-1)
-    circuit.crz(num*pi/2,h,abs(b)-1)
-    circuit.crz(num*pi/4,h,abs(c)-1)
-#     Works pretty good
-#     num = (max(0,a)/a)*2**2 + (max(0,b)/b)*2**1 + (max(0,c)/c)*2**0
-#     circuit.crz(-num*pi/4,h,abs(a)-1)
-#     circuit.crz(-num*pi/2,h,abs(b)-1)
-#     circuit.crz(-num*pi,h,abs(c)-1)
+    num = -(a/abs(a))*(2**(abs(a)-1))
+    circuit.cp(num*pi/(2**(0)),h,abs(a)-1)
+    circuit.cp(num*pi/(2**(1)),h,abs(b)-1)
+    circuit.cp(num*pi/(2**(2)),h,abs(c)-1)
+    
+    num = -(b/abs(b))*(2**(abs(b)-1))
+    circuit.cp(num*pi/(2**(0)),h,abs(a)-1)
+    circuit.cp(num*pi/(2**(1)),h,abs(b)-1)
+    circuit.cp(num*pi/(2**(2)),h,abs(c)-1)
+    
+    num = -(c/abs(c))*(2**(abs(c)-1))
+    circuit.cp(num*pi/(2**(0)),h,abs(a)-1)
+    circuit.cp(num*pi/(2**(1)),h,abs(b)-1)
+    circuit.cp(num*pi/(2**(2)),h,abs(c)-1)
+        
+#     num = (a/abs(a))*2**0 + (b/abs(b))*2**1 + (c/abs(c))*2**2
+#     circuit.crz(num*pi,h,abs(a)-1)
+#     circuit.crz(num*pi/2,h,abs(b)-1)
+#     circuit.crz(num*pi/4,h,abs(c)-1)
+
 
 def phase32(circuit,a,b,c,h):
-    num = int(max(0,a/abs(a))*2**0 + max(0,b/abs(b))*2**1 + max(0,c/abs(c))*2**2)
+#     num = int(max(0,a/abs(a))*2**0 + max(0,b/abs(b))*2**1 + max(0,c/abs(c))*2**2)
+#     co = random.randint(1,7)
+#     while(not coprime(num,co)):
+#         co = random.randint(1,7)
+#     circuit.cp(-num*pi/4,h,abs(a)-1)
+#     circuit.cp(-num*pi/2,h,abs(b)-1)
+#     circuit.cp(-num*pi,h,abs(c)-1)
+    
+    num = int(max(0,a/abs(a))*2**2 + max(0,b/abs(b))*2**1 + max(0,c/abs(c))*2**0)
     co = random.randint(1,7)
     while(not coprime(num,co)):
         co = random.randint(1,7)
-    circuit.crz(co*pi,h,abs(a)-1)
-    circuit.crz(co*pi/2,h,abs(b)-1)
-    circuit.crz(co*pi/4,h,abs(c)-1)
+    circuit.cp(co*pi/4,h,abs(a)-1)
+    circuit.cp(co*pi/2,h,abs(b)-1)
+    circuit.cp(co*pi,h,abs(c)-1)
 #     Works pretty good
 #     num = (max(0,a)/a)*2**2 + (max(0,b)/b)*2**1 + (max(0,c)/c)*2**0
 #     circuit.crz(-num*pi/4,h,abs(a)-1)
@@ -164,27 +197,46 @@ def phaseAll(h,circuit,par,a,b,c):
 #     for p in range(par['nQ']):
 #         circuit.crz(pi,h,p)  
 #     num = (a/((a**2)**(1/2)))*2**a
-    num = 2**abs(a)
-           
+#     num = 2**(abs(a)-1)
+#     for p in range(par['nQ']):
+#         circuit.crz(num*pi/(2**p) + (max(0,-a)/(-a))*pi,h,p)
+                                                               
+# #     num = (b/((b**2)**(1/2)))*2**b
+#     num = 2**(abs(b)-1) 
+#     for p in range(par['nQ']):
+#         circuit.crz(num*pi/(2**p) + (max(0,-b)/(-b))*pi,h,p)
+# #         circuit.crz(num*pi/(2**(par['nQ']-p-1)),h,p)
+                                                               
+# #     num = (c/((c**2)**(1/2)))*2**c
+#     num = 2**(abs(c)-1)
+#     for p in range(par['nQ']):
+#         circuit.crz(num*pi/(2**p) + (max(0,-c)/(-c))*pi,h,p)  
+# par['nQ']-
+    num = 2**(abs(a)-1)
     for p in range(par['nQ']):
-        circuit.crz(num*pi/(2**p) + (max(0,-a)/(-a))*pi,h,p)
+        circuit.cp((a/abs(a))*num*pi/(2**(p)),h,p)
                                                                
 #     num = (b/((b**2)**(1/2)))*2**b
-    num = 2**abs(b) 
-           
+    num = 2**(abs(b)-1) 
     for p in range(par['nQ']):
-        circuit.crz(num*pi/(2**p) + (max(0,-b)/(-b))*pi,h,p)
+        circuit.cp((b/abs(b))*num*pi/(2**(p)),h,p)
 #         circuit.crz(num*pi/(2**(par['nQ']-p-1)),h,p)
                                                                
 #     num = (c/((c**2)**(1/2)))*2**c
-    num = 2**abs(c) 
+    num = 2**(abs(c)-1)
     for p in range(par['nQ']):
-        circuit.crz(num*pi/(2**p) + (max(0,-c)/(-c))*pi,h,p)                                                        
+        circuit.cp((c/abs(c))*num*pi/(2**(p)),h,p) 
                                                             
-def phase31(circuit,a,b,c,h):
-    circuit.crz(pi,h,abs(a)-1)
-    circuit.crz(pi/2,h,abs(b)-1)
-    circuit.crz(pi/4,h,abs(c)-1)
+def phase31(circuit,a,b,c,h,n):
+#     co = random.randint(1,7)
+#     sign = random.choice([1,-1])
+#     circuit.cp(sign*co*pi/4,h,abs(a)-1)
+#     circuit.cp(sign*co*pi/2,h,abs(b)-1)
+#     circuit.cp(sign*co*pi,h,abs(c)-1)
+#     (-a/abs(a))*
+    circuit.cp(n*pi/4,h,abs(a)-1)
+    circuit.cp(n*pi/2,h,abs(b)-1)
+    circuit.cp(n*pi,h,abs(c)-1)
         
 def qft3(c,q1,q2,q3):
     c.h(abs(q3)-1)
@@ -241,7 +293,7 @@ def inverse_qft(circuit, n, s):
 def buildCircuit(par,measure):
     helper = 1 #number of ancillary qubits
     h = par['nQ'] #qubit that can be used for calculations
-
+    SAT = par['sat']
     qr = QuantumRegister(par['nQ']+helper, 'q')
     cr = ClassicalRegister(par['nQ'], 'c')
     c = QuantumCircuit(qr, cr)
@@ -252,17 +304,49 @@ def buildCircuit(par,measure):
             c.h(x)
                 
     for n in range(par['numIt']): # Repeat circuit numIt times
-#         random.shuffle(par['sat'])
-        for clause in par['sat']: # loop through all clauses in the SAT instance
+        
+        if par['random']:
+            SAT = random.sample(par['sat'], len(par['sat']))
             
+        for clause in SAT: # loop through all clauses in the SAT instance
             
+            c.reset(h) 
             remStates(clause[0],clause[1],clause[2],h,c,0)
-            had3(h,clause[0],clause[1],clause[2],c,par)
             endRem(clause[0],clause[1],clause[2],c)
+            had3(h,clause[0],clause[1],clause[2],c,par)
+#             endRem(clause[0],clause[1],clause[2],c)
+#             c.reset(h)
+#             c.barrier(qr)  
+            
+    if measure:
+        c.measure(qr[:-1],cr)
+            
+    return c
+
+def buildCircuitY(par,measure):
+    helper = 1 #number of ancillary qubits
+    h = par['nQ'] #qubit that can be used for calculations
+    SAT = par['sat']
+    qr = QuantumRegister(par['nQ']+helper, 'q')
+    cr = ClassicalRegister(par['nQ'], 'c')
+    c = QuantumCircuit(qr, cr)
+
+    # Hadimard all qubits used in SAT
+    if par['had']:
+        for x in range(par['nQ']):
+            c.h(x)
+                
+    for n in range(par['numIt']): # Repeat circuit numIt times
+        
+        if par['random']:
+            SAT = random.sample(par['sat'], len(par['sat']))
+            
+        for clause in SAT: # loop through all clauses in the SAT instance            
+            remStates(clause[0],clause[1],clause[2],h,c,0)
+            endRem(clause[0],clause[1],clause[2],c)
+            y3(h,clause[0],clause[1],clause[2],c,par)
             c.reset(h)
-            
-            c.barrier(qr)  
-            
+#             c.barrier(qr)  
     if measure:
         c.measure(qr[:-1],cr)
             
@@ -282,16 +366,6 @@ def buildCircuitCost(par,measure):
             c.h(x)
                 
     for n in range(par['numIt']): # Repeat circuit numIt times
-#         random.shuffle(par['sat'])
-#         for clause in par['sat']: # loop through all clauses in the SAT instance
-            
-            
-#             remStates(clause[0],clause[1],clause[2],h,c,0)
-#             had3(h,clause[0],clause[1],clause[2],c,par)
-#             c.reset(h)
-            
-#             c.barrier(qr) 
-            
         addPhase(c,par,par['beta'])
             
         for clause in par['sat']: # loop through all clauses in the SAT instance
@@ -324,22 +398,10 @@ def buildCircuitQFT(par,measure):
     qft(c,par['nQ'])
                 
     for n in range(par['numIt']): # Repeat circuit numIt times
-#         random.shuffle(par['sat'])
         for clause in par['sat']: # loop through all clauses in the SAT instance
-            
-            
             remStates(clause[0],clause[1],clause[2],h,c,par['nQ'])
-#             hadAll(h,c,par)
             had3(h,clause[0],clause[1],clause[2],c,par)
             c.reset(h)
-            
-            c.barrier(qr) 
-            
-#         addPhase(c,par,par['beta'])
-            
-#         for clause in par['sat']: # loop through all clauses in the SAT instance
-            
-#             addCost(clause[0],clause[1],clause[2],c,par,par['gamma'])            
 #             c.barrier(qr) 
     inverse_qft(c,par['nQ'],0)
     if measure:
@@ -373,33 +435,16 @@ def buildCircuitQFTor(par,measure):
     qft(c,par['nQ'])
                 
     for n in range(par['numIt']): # Repeat circuit numIt times
-#         random.shuffle(par['sat'])
         for clause in par['sat']: # loop through all clauses in the SAT instance
-            
-            
             remStates(clause[0],clause[1],clause[2],h2,c,par['nQ'])
-#             hadAll(h,c,par)
-            
-#             c.reset(h)
-            
-            
-            
             c.x(h2)
             c.ccx(h1+flip,h2,h1)
             h1 = h1 + flip
             flip = -flip
             c.reset(h1)
             c.reset(h2)
-            
-            c.barrier(qr) 
-            
-        hadAll(h1+flip,c,par)
-#         addPhase(c,par,par['beta'])
-            
-#         for clause in par['sat']: # loop through all clauses in the SAT instance
-            
-#             addCost(clause[0],clause[1],clause[2],c,par,par['gamma'])            
 #             c.barrier(qr) 
+        hadAll(h1+flip,c,par)
     inverse_qft(c,par['nQ'],0)
     if measure:
         c.measure(qr[:-1],cr)
@@ -426,48 +471,29 @@ def buildCircuitQFTorNOT(par,measure):
     c.x(h1+flip)
     
     for n in range(par['numIt']): # Repeat circuit numIt times
-#         random.shuffle(par['sat'])
         for clause in par['sat']: # loop through all clauses in the SAT instance
-
             remStates(clause[0],clause[1],clause[2],h2,c,0)
 #             hadAll(h,c,par)
-            
-#             c.reset(h)
-            
-            
-            
+            endRem(clause[0],clause[1],clause[2],c)            
             c.x(h2)
             c.ccx(h1+flip,h2,h1)
             h1 = h1 + flip
             flip = -flip
             c.reset(h1)
             c.reset(h2)
-            
-            c.barrier(qr) 
-            
-#         hadAll(h1+flip,c,par)
-#         addPhase(c,par,par['beta'])
-            
-#         for clause in par['sat']: # loop through all clauses in the SAT instance
-            
-#             addCost(clause[0],clause[1],clause[2],c,par,par['gamma'])            
 #             c.barrier(qr) 
+            
     c.x(h1+flip)
     qft(c,par['nQ'])
     notAll(h1+flip,c,par)
     inverse_qft(c,par['nQ'],0)
     if measure:
         c.measure(qr[:-helper],cr)
-            
     return c
 
 def buildCircuitQFTNOT(par,measure):
     helper = 1 #number of ancillary qubits
     h = par['nQ'] #qubit that can be used for calculations
-#     h1 = par['nQ']   #qubit that can be used for calculations
-#     h2 = par['nQ']+2  #qubit where 
-#     flip = 1   #variable to change position of h1
-    
     qr = QuantumRegister(par['nQ']+helper, 'q')
     cr = ClassicalRegister(par['nQ'], 'c')
     c = QuantumCircuit(qr, cr)
@@ -476,45 +502,25 @@ def buildCircuitQFTNOT(par,measure):
     if par['had']:
         for x in range(par['nQ']):
             c.h(x)
-            
-    # flip helper variable so first gate is added to rolling and
-#     c.x(h1+flip)
     
     for n in range(par['numIt']): # Repeat circuit numIt times
-#         random.shuffle(par['sat'])
 #         cnum = 0
         for clause in par['sat']: # loop through all clauses in the SAT instance
-            
-            
             remStates(clause[0],clause[1],clause[2],h,c,0)
-#             hadAll(h,c,par)
-            
-#             c.reset(h)
             qft(c,par['nQ'])
             notAll(h,c,par)
-#             hadAll(h,c,par)
-#             notAll(h,c,par)
             inverse_qft(c,par['nQ'],0)
             endRem(clause[0],clause[1],clause[2],c)
-            
             c.reset(h)
 #             cnum+=1
-            c.barrier(qr) 
-            
-            
-    
+#             c.barrier(qr) 
     if measure:
         c.measure(qr[:-helper],cr)
-            
     return c
                                                                
 def buildCircuitQFTphase(par,measure):
     helper = 1 #number of ancillary qubits
     h = par['nQ'] #qubit that can be used for calculations
-#     h1 = par['nQ']   #qubit that can be used for calculations
-#     h2 = par['nQ']+2  #qubit where 
-#     flip = 1   #variable to change position of h1
-    
     qr = QuantumRegister(par['nQ']+helper, 'q')
     cr = ClassicalRegister(par['nQ'], 'c')
     c = QuantumCircuit(qr, cr)
@@ -524,80 +530,59 @@ def buildCircuitQFTphase(par,measure):
         for x in range(par['nQ']):
             c.h(x)
             
-    # flip helper variable so first gate is added to rolling and
-#     c.x(h1+flip)
-    
     for n in range(par['numIt']): # Repeat circuit numIt times
-#         random.shuffle(par['sat'])
 #         cnum = 0
-        for clause in par['sat']: # loop through all clauses in the SAT instance
             
+        for clause in par['sat']: # loop through all clauses in the SAT instance
             
             remStates(clause[0],clause[1],clause[2],h,c,0)
 #             hadAll(h,c,par)
-            
+            endRem(clause[0],clause[1],clause[2],c)
 #             c.reset(h)
             qft(c,par['nQ'])
             phaseAll(h,c,par,clause[0],clause[1],clause[2])
 #             hadAll(h,c,par)
 #             notAll(h,c,par)
+#             YAll(h,c,par)
             inverse_qft(c,par['nQ'],0)
-            endRem(clause[0],clause[1],clause[2],c)
+#             endRem(clause[0],clause[1],clause[2],c)
             c.reset(h)
 #             cnum+=1
-            c.barrier(qr) 
-            
-            
-    
+#             c.barrier(qr) 
     if measure:
         c.measure(qr[:-helper],cr)
-            
     return c
 
 def buildCircuitQFT3phase(par,measure):
     helper = 1 #number of ancillary qubits
     h = par['nQ'] #qubit that can be used for calculations
-#     h1 = par['nQ']   #qubit that can be used for calculations
-#     h2 = par['nQ']+2  #qubit where 
-#     flip = 1   #variable to change position of h1
-    
     qr = QuantumRegister(par['nQ']+helper, 'q')
     cr = ClassicalRegister(par['nQ'], 'c')
     c = QuantumCircuit(qr, cr)
+    SAT = deepcopy(par['sat'])
 
     # Hadimard all qubits used in SAT
     if par['had']:
         for x in range(par['nQ']):
             c.h(x)
-            
-    # flip helper variable so first gate is added to rolling and
-#     c.x(h1+flip)
-    
+
     for n in range(par['numIt']): # Repeat circuit numIt times
-#         random.shuffle(par['sat'])
-        for clause in par['sat']: # loop through all clauses in the SAT instance
+        if par['random']:
+            SAT = random.sample(par['sat'], len(par['sat']))
+        if par['rev']:
+            SAT.reverse()
             
-            
+        for clause in SAT: # loop through all clauses in the SAT instance
             remStates(clause[0],clause[1],clause[2],h,c,0)
-#             hadAll(h,c,par)
-            
-#             c.reset(h)
-            qft3(c,clause[0],clause[1],clause[2])
-            phase32(c,clause[0],clause[1],clause[2],h)
-            qft3i(c,clause[0],clause[1],clause[2])
             endRem(clause[0],clause[1],clause[2],c)
+            qft3(c,clause[0],clause[1],clause[2])
+            phase31(c,clause[0],clause[1],clause[2],h,n+1)
+#             phase32(c,clause[0],clause[1],clause[2],h)
+#             Z3(c,clause[0],clause[1],clause[2],h)
+            qft3i(c,clause[0],clause[1],clause[2])
+#             endRem(clause[0],clause[1],clause[2],c)
             c.reset(h)
-            
-            c.barrier(qr) 
-            
-#         hadAll(h1+flip,c,par)
-#         addPhase(c,par,par['beta'])
-            
-#         for clause in par['sat']: # loop through all clauses in the SAT instance
-            
-#             addCost(clause[0],clause[1],clause[2],c,par,par['gamma'])            
 #             c.barrier(qr) 
-    
     if measure:
         c.measure(qr[:-helper],cr)
             
@@ -606,9 +591,98 @@ def buildCircuitQFT3phase(par,measure):
 def buildCircuitQFT3NOT(par,measure):
     helper = 1 #number of ancillary qubits
     h = par['nQ'] #qubit that can be used for calculations
-#     h1 = par['nQ']   #qubit that can be used for calculations
-#     h2 = par['nQ']+2  #qubit where 
-#     flip = 1   #variable to change position of h1
+    SAT = par['sat']
+    qr = QuantumRegister(par['nQ']+helper, 'q')
+    cr = ClassicalRegister(par['nQ'], 'c')
+    c = QuantumCircuit(qr, cr)
+
+    # Hadimard all qubits used in SAT
+    if par['had']:
+        for x in range(par['nQ']):
+            c.h(x)
+    
+    for n in range(par['numIt']): # Repeat circuit numIt times
+        if par['random']:
+            SAT = random.sample(par['sat'], len(par['sat']))
+            
+        for clause in SAT: # loop through all clauses in the SAT instance
+            remStates(clause[0],clause[1],clause[2],h,c,0)
+            endRem(clause[0],clause[1],clause[2],c)
+            qft3(c,clause[0],clause[1],clause[2])
+            not3(h,clause[0],clause[1],clause[2],c,par)
+            qft3i(c,clause[0],clause[1],clause[2])
+#             endRem(clause[0],clause[1],clause[2],c)
+            c.reset(h)
+#             c.barrier(qr) 
+    if measure:
+        c.measure(qr[:-helper],cr)
+            
+    return c
+
+def buildCircuitQFT3HAD(par,measure):
+    helper = 1 #number of ancillary qubits
+    h = par['nQ'] #qubit that can be used for calculations
+    SAT = par['sat']
+    qr = QuantumRegister(par['nQ']+helper, 'q')
+    cr = ClassicalRegister(par['nQ'], 'c')
+    c = QuantumCircuit(qr, cr)
+
+    # Hadimard all qubits used in SAT
+    if par['had']:
+        for x in range(par['nQ']):
+            c.h(x)
+            
+    for n in range(par['numIt']): # Repeat circuit numIt times
+        if par['random']:
+            SAT = random.sample(par['sat'], len(par['sat']))
+            
+        for clause in SAT: # loop through all clauses in the SAT instance
+            remStates(clause[0],clause[1],clause[2],h,c,0)
+#             endRem(clause[0],clause[1],clause[2],c)
+            qft3(c,clause[0],clause[1],clause[2])
+            had3(h,clause[0],clause[1],clause[2],c,par)
+            qft3i(c,clause[0],clause[1],clause[2])
+            endRem(clause[0],clause[1],clause[2],c)
+            c.reset(h)
+#             c.barrier(qr) 
+    if measure:
+        c.measure(qr[:-helper],cr)
+    return c
+
+def buildCircuitQFT3Y(par,measure):
+    helper = 1 #number of ancillary qubits
+    h = par['nQ'] #qubit that can be used for calculations
+    SAT = par['sat']
+    qr = QuantumRegister(par['nQ']+helper, 'q')
+    cr = ClassicalRegister(par['nQ'], 'c')
+    c = QuantumCircuit(qr, cr)
+
+    # Hadimard all qubits used in SAT
+    if par['had']:
+        for x in range(par['nQ']):
+            c.h(x)
+    
+    for n in range(par['numIt']): # Repeat circuit numIt times
+#         random.shuffle(par['sat'])
+        if par['random']:
+            SAT = random.sample(par['sat'], len(par['sat']))
+            
+        for clause in SAT: # loop through all clauses in the SAT instance
+            remStates(clause[0],clause[1],clause[2],h,c,0)
+#             endRem(clause[0],clause[1],clause[2],c)
+            qft3(c,clause[0],clause[1],clause[2])
+            y3(h,clause[0],clause[1],clause[2],c,par)
+            qft3i(c,clause[0],clause[1],clause[2])
+            endRem(clause[0],clause[1],clause[2],c)
+            c.reset(h)
+#             c.barrier(qr) 
+    if measure:
+        c.measure(qr[:-helper],cr)         
+    return c
+
+def buildCircuitAll3(par,measure):
+    helper = 1 #number of ancillary qubits
+    h = par['nQ'] #qubit that can be used for calculations
     
     qr = QuantumRegister(par['nQ']+helper, 'q')
     cr = ClassicalRegister(par['nQ'], 'c')
@@ -623,37 +697,23 @@ def buildCircuitQFT3NOT(par,measure):
 #     c.x(h1+flip)
     
     for n in range(par['numIt']): # Repeat circuit numIt times
-#         random.shuffle(par['sat'])
         for clause in par['sat']: # loop through all clauses in the SAT instance
             
-            
             remStates(clause[0],clause[1],clause[2],h,c,0)
+            endRem(clause[0],clause[1],clause[2],c)
 #             hadAll(h,c,par)
+            had3(h,clause[0],clause[1],clause[2],c,par)
             
-#             c.reset(h)
+            c.reset(h)
+            remStates(clause[0],clause[1],clause[2],h,c,0)
             qft3(c,clause[0],clause[1],clause[2])
             not3(h,clause[0],clause[1],clause[2],c,par)
-#             had3(h,clause[0],clause[1],clause[2],c,par)
-#             not3(h,clause[0],clause[1],clause[2],c,par)
-#             had3(h,clause[0],clause[1],clause[2],c,par)
-#             not3(h,clause[0],clause[1],clause[2],c,par)
             qft3i(c,clause[0],clause[1],clause[2])
             endRem(clause[0],clause[1],clause[2],c)
             c.reset(h)
-            
-            c.barrier(qr) 
-            
-#         hadAll(h1+flip,c,par)
-#         addPhase(c,par,par['beta'])
-            
-#         for clause in par['sat']: # loop through all clauses in the SAT instance
-            
-#             addCost(clause[0],clause[1],clause[2],c,par,par['gamma'])            
 #             c.barrier(qr) 
-    
     if measure:
-        c.measure(qr[:-helper],cr)
-            
+        c.measure(qr[:-helper],cr)        
     return c
 
 def buildCircuitNOT(par,measure):
@@ -670,19 +730,14 @@ def buildCircuitNOT(par,measure):
             c.h(x)
                 
     for n in range(par['numIt']): # Repeat circuit numIt times
-#         random.shuffle(par['sat'])
         for clause in par['sat']: # loop through all clauses in the SAT instance
-            
-            
             remStates(clause[0],clause[1],clause[2],h,c,0)
             not3(h,clause[0],clause[1],clause[2],c,par)
             c.reset(h)
-            
-            c.barrier(qr)  
+#             c.barrier(qr)  
             
     if measure:
         c.measure(qr[:-1],cr)
-            
     return c
 
 def buildCircuitMeasure(par,measure):
@@ -700,19 +755,14 @@ def buildCircuitMeasure(par,measure):
             c.h(x)
                 
     for n in range(par['numIt']): # Repeat circuit numIt times
-#         random.shuffle(par['sat'])
         for clause in par['sat']: # loop through all clauses in the SAT instance
-            
-            
             remStates(clause[0],clause[1],clause[2],h,c,0)
             measureFlip(h,clause[0],clause[1],clause[2],c,par)
             c.reset(h)
-            
-            c.barrier(qr)  
+#             c.barrier(qr)  
             
     if measure:
         c.measure(qr[:-1],cr)
-            
     return c
 
 
